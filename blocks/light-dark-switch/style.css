@@ -1,0 +1,37 @@
+/* Windrose Livery, light and dark switch. */
+.windrose-livery-switch__button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	margin: 0;
+	padding: 0.25em;
+	border: 0;
+	border-radius: 999px;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.windrose-livery-switch__button:focus-visible {
+	outline: 2px solid currentcolor;
+	outline-offset: 2px;
+}
+
+.windrose-livery-switch__icon {
+	width: 1.25em;
+	height: 1.25em;
+	fill: currentcolor;
+	flex: none;
+}
+
+/* The moon while light shows (pressing it gives dark), the sun while dark shows. */
+.windrose-livery-switch__button .windrose-livery-switch__sun,
+.windrose-livery-switch__button[aria-pressed="true"] .windrose-livery-switch__moon {
+	display: none;
+}
+
+.windrose-livery-switch__button[aria-pressed="true"] .windrose-livery-switch__sun {
+	display: inline;
+}

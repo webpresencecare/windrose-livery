@@ -1,0 +1,822 @@
+[
+	{
+		"slug": "atkinson-hyperlegible-next",
+		"name": "Atkinson Hyperlegible Next",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "atkinson-hyperlegible-next-var-italic.woff2",
+				"fontWeight": "200 800",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "atkinson-hyperlegible-next-var-normal.woff2",
+				"fontWeight": "200 800",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "bebas-neue",
+		"name": "Bebas Neue",
+		"category": "display",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "bebas-neue-400-normal.woff2",
+				"fontWeight": "400",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "bricolage-grotesque",
+		"name": "Bricolage Grotesque",
+		"category": "display",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "bricolage-grotesque-var-normal.woff2",
+				"fontWeight": "200 800",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "cormorant-garamond",
+		"name": "Cormorant Garamond",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "cormorant-garamond-var-normal.woff2",
+				"fontWeight": "300 700",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "dm-sans",
+		"name": "DM Sans",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "dm-sans-var-italic.woff2",
+				"fontWeight": "100 1000",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "dm-sans-var-normal.woff2",
+				"fontWeight": "100 1000",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "figtree",
+		"name": "Figtree",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "figtree-var-italic.woff2",
+				"fontWeight": "300 900",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "figtree-var-normal.woff2",
+				"fontWeight": "300 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "fraunces",
+		"name": "Fraunces",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "fraunces-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "fredoka",
+		"name": "Fredoka",
+		"category": "display",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "fredoka-var-normal.woff2",
+				"fontWeight": "300 700",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "grandstander",
+		"name": "Grandstander",
+		"category": "display",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "grandstander-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "ibm-plex-sans",
+		"name": "IBM Plex Sans",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese",
+			"cyrillic",
+			"greek"
+		],
+		"faces": [
+			{
+				"file": "ibm-plex-sans-var-italic.woff2",
+				"fontWeight": "100 700",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "ibm-plex-sans-var-normal.woff2",
+				"fontWeight": "100 700",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "instrument-sans",
+		"name": "Instrument Sans",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "instrument-sans-var-italic.woff2",
+				"fontWeight": "400 700",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "instrument-sans-var-normal.woff2",
+				"fontWeight": "400 700",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "instrument-serif",
+		"name": "Instrument Serif",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "instrument-serif-400-normal.woff2",
+				"fontWeight": "400",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "inter",
+		"name": "Inter",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese",
+			"cyrillic",
+			"greek"
+		],
+		"faces": [
+			{
+				"file": "inter-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			},
+			{
+				"file": "inter-var-italic.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "italic"
+			}
+		]
+	},
+	{
+		"slug": "inter-tight",
+		"name": "Inter Tight",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese",
+			"cyrillic",
+			"greek"
+		],
+		"faces": [
+			{
+				"file": "inter-tight-var-italic.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "inter-tight-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "jetbrains-mono",
+		"name": "JetBrains Mono",
+		"category": "mono",
+		"generic": "monospace",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese",
+			"cyrillic",
+			"greek"
+		],
+		"faces": [
+			{
+				"file": "jetbrains-mono-var-normal.woff2",
+				"fontWeight": "100 800",
+				"fontStyle": "normal"
+			},
+			{
+				"file": "jetbrains-mono-var-italic.woff2",
+				"fontWeight": "100 800",
+				"fontStyle": "italic"
+			}
+		]
+	},
+	{
+		"slug": "jost",
+		"name": "Jost",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "jost-var-italic.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "jost-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "karla",
+		"name": "Karla",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "karla-var-italic.woff2",
+				"fontWeight": "200 800",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "karla-var-normal.woff2",
+				"fontWeight": "200 800",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "lexend",
+		"name": "Lexend",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "lexend-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "libre-franklin",
+		"name": "Libre Franklin",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "libre-franklin-var-italic.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "libre-franklin-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "literata",
+		"name": "Literata",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese",
+			"cyrillic",
+			"greek"
+		],
+		"faces": [
+			{
+				"file": "literata-var-italic.woff2",
+				"fontWeight": "200 900",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "literata-var-normal.woff2",
+				"fontWeight": "200 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "lora",
+		"name": "Lora",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "lora-var-normal.woff2",
+				"fontWeight": "400 700",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "manrope",
+		"name": "Manrope",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese",
+			"cyrillic",
+			"greek"
+		],
+		"faces": [
+			{
+				"file": "manrope-var-normal.woff2",
+				"fontWeight": "200 800",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "mulish",
+		"name": "Mulish",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "mulish-var-italic.woff2",
+				"fontWeight": "200 1000",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "mulish-var-normal.woff2",
+				"fontWeight": "200 1000",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "newsreader",
+		"name": "Newsreader",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "newsreader-var-normal.woff2",
+				"fontWeight": "200 800",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "nunito",
+		"name": "Nunito",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "nunito-var-italic.woff2",
+				"fontWeight": "200 1000",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "nunito-var-normal.woff2",
+				"fontWeight": "200 1000",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "outfit",
+		"name": "Outfit",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "outfit-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "playfair-display",
+		"name": "Playfair Display",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "playfair-display-var-normal.woff2",
+				"fontWeight": "400 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "plus-jakarta-sans",
+		"name": "Plus Jakarta Sans",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "plus-jakarta-sans-var-italic.woff2",
+				"fontWeight": "200 800",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "plus-jakarta-sans-var-normal.woff2",
+				"fontWeight": "200 800",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "quicksand",
+		"name": "Quicksand",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "quicksand-var-normal.woff2",
+				"fontWeight": "300 700",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "red-hat-display",
+		"name": "Red Hat Display",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "red-hat-display-var-normal.woff2",
+				"fontWeight": "300 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "red-hat-text",
+		"name": "Red Hat Text",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "red-hat-text-var-italic.woff2",
+				"fontWeight": "300 700",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "red-hat-text-var-normal.woff2",
+				"fontWeight": "300 700",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "roboto-slab",
+		"name": "Roboto Slab",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese",
+			"cyrillic",
+			"greek"
+		],
+		"faces": [
+			{
+				"file": "roboto-slab-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "rubik",
+		"name": "Rubik",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "rubik-var-italic.woff2",
+				"fontWeight": "300 900",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "rubik-var-normal.woff2",
+				"fontWeight": "300 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "shrikhand",
+		"name": "Shrikhand",
+		"category": "display",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "shrikhand-400-normal.woff2",
+				"fontWeight": "400",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "source-sans-3",
+		"name": "Source Sans 3",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese",
+			"cyrillic",
+			"greek"
+		],
+		"faces": [
+			{
+				"file": "source-sans-3-var-italic.woff2",
+				"fontWeight": "200 900",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "source-sans-3-var-normal.woff2",
+				"fontWeight": "200 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "source-serif-4",
+		"name": "Source Serif 4",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese",
+			"cyrillic",
+			"greek"
+		],
+		"faces": [
+			{
+				"file": "source-serif-4-var-italic.woff2",
+				"fontWeight": "200 900",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "source-serif-4-var-normal.woff2",
+				"fontWeight": "200 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "syne",
+		"name": "Syne",
+		"category": "display",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "syne-var-normal.woff2",
+				"fontWeight": "400 800",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "work-sans",
+		"name": "Work Sans",
+		"category": "sans",
+		"generic": "sans-serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "work-sans-var-italic.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "italic"
+			},
+			{
+				"file": "work-sans-var-normal.woff2",
+				"fontWeight": "100 900",
+				"fontStyle": "normal"
+			}
+		]
+	},
+	{
+		"slug": "young-serif",
+		"name": "Young Serif",
+		"category": "serif",
+		"generic": "serif",
+		"covers": [
+			"latin",
+			"latin-ext",
+			"vietnamese"
+		],
+		"faces": [
+			{
+				"file": "young-serif-400-normal.woff2",
+				"fontWeight": "400",
+				"fontStyle": "normal"
+			}
+		]
+	}
+]

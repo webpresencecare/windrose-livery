@@ -1,0 +1,650 @@
+// Style Mermaid: the app, in Livery's screen and on a public page.
+// Colors from the WordPress admin's gray scale; text sizes relative on public
+// pages (the site's own font), so it fits the page around it.
+
+.windrose-livery-mermaid {
+	--mermaid-border: #ddd;
+	--mermaid-muted: #5c5c5c;
+	--mermaid-accent: var(--wp-admin-theme-color, #3858e9);
+	--mermaid-fail: #b32d2e;
+	--mermaid-pass: #007017;
+	--mermaid-warn: #8a5300;
+	box-sizing: border-box;
+	color: inherit;
+	font-size: 14px;
+	line-height: 1.5;
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+
+	.screen-reader-text {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+}
+
+.windrose-livery-mermaid__steps {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+	margin-bottom: 16px;
+
+	ol {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	button {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		min-height: 36px;
+		padding: 4px 10px;
+		border: 1px solid var(--mermaid-border);
+		border-radius: 18px;
+		background: #fff;
+		color: #1e1e1e;
+		font: inherit;
+		cursor: pointer;
+
+		&[aria-current="step"] {
+			border-color: var(--mermaid-accent);
+			background: var(--mermaid-accent);
+			color: #fff;
+		}
+
+		&:focus-visible {
+			outline: 2px solid var(--mermaid-accent);
+			outline-offset: 2px;
+		}
+	}
+}
+
+.windrose-livery-mermaid__step-number {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.windrose-livery-mermaid__body {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 16px;
+
+	@media (min-width: 960px) {
+		grid-template-columns: minmax(320px, 440px) minmax(0, 1fr);
+		align-items: start;
+	}
+}
+
+.windrose-livery-mermaid__panel {
+	min-width: 0;
+	padding: 16px;
+	border: 1px solid var(--mermaid-border);
+	border-radius: 4px;
+	background: #fff;
+	color: #1e1e1e;
+}
+
+.windrose-livery-mermaid__title {
+	margin: 0 0 12px;
+	font-size: 18px;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.windrose-livery-mermaid__h {
+	margin: 24px 0 8px;
+	font-size: 15px;
+}
+
+.windrose-livery-mermaid__h4 {
+	margin: 16px 0 8px;
+	font-size: 13px;
+}
+
+.windrose-livery-mermaid__muted {
+	color: var(--mermaid-muted);
+}
+
+.windrose-livery-mermaid__done {
+	color: var(--mermaid-pass);
+	font-weight: 600;
+
+	&:empty {
+		margin: 0;
+	}
+}
+
+.windrose-livery-mermaid__error {
+	color: var(--mermaid-fail);
+}
+
+.windrose-livery-mermaid__stack {
+	display: grid;
+	gap: 16px;
+}
+
+.windrose-livery-mermaid__intro,
+.windrose-livery-mermaid__help {
+	margin: 0;
+}
+
+.windrose-livery-mermaid__help {
+	color: var(--mermaid-muted);
+}
+
+// Blocks step: the panels sit in the step column,
+// with a border of their own.
+.windrose-livery-mermaid__blocks {
+	border: 1px solid var(--mermaid-border);
+}
+
+.windrose-livery-mermaid__look {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: start;
+	gap: 16px;
+
+	> .windrose-livery-mermaid__stack {
+		flex: 1 1 220px;
+		min-width: 0;
+	}
+}
+
+.windrose-livery-mermaid__diagram {
+	flex: 0 0 auto;
+	border: 1px solid var(--mermaid-border);
+	border-radius: 4px;
+}
+
+.windrose-livery-mermaid__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
+	gap: 8px;
+
+	> * {
+		flex: 1 1 140px;
+	}
+}
+
+.windrose-livery-mermaid__two {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 16px;
+	margin: 16px 0;
+}
+
+.windrose-livery-mermaid__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: 12px;
+}
+
+.windrose-livery-mermaid__nav,
+.windrose-livery-mermaid__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 24px;
+}
+
+// "See the patterns in this style": first in the row, on a line of its own.
+.windrose-livery-mermaid__library {
+	flex-basis: 100%;
+	gap: 0.3em;
+}
+
+.windrose-livery-mermaid__new {
+	font-size: 0.85em;
+}
+
+// Ready styles.
+.windrose-livery-mermaid__cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 170px), 1fr));
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.windrose-livery-mermaid__cards > li,
+.windrose-livery-mermaid__palettes > li {
+	min-width: 0;
+}
+
+.windrose-livery-mermaid__card,
+.windrose-livery-mermaid__palette {
+	box-sizing: border-box;
+	display: grid;
+	min-width: 0;
+	gap: 4px;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	border: 1px solid var(--mermaid-border);
+	border-radius: 4px;
+	background: #fff;
+	color: #1e1e1e;
+	font: inherit;
+	text-align: start;
+	cursor: pointer;
+
+	&:hover,
+	&[aria-pressed="true"] {
+		border-color: var(--mermaid-accent);
+	}
+
+	&[aria-pressed="true"] {
+		box-shadow: inset 0 0 0 1px var(--mermaid-accent);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--mermaid-accent);
+		outline-offset: 2px;
+	}
+}
+
+.windrose-livery-mermaid__card-title {
+	font-size: 17px;
+	line-height: 1.3;
+}
+
+.windrose-livery-mermaid__card-text {
+	font-size: 12px;
+	color: var(--mermaid-muted);
+}
+
+.windrose-livery-mermaid__swatches {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 2px;
+}
+
+.windrose-livery-mermaid__swatch {
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-radius: 50%;
+}
+
+// Fonts.
+.windrose-livery-mermaid__chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+}
+
+.windrose-livery-mermaid__chip {
+	min-height: 32px;
+	padding: 4px 10px;
+	border: 1px solid var(--mermaid-border);
+	border-radius: 16px;
+	background: #fff;
+	color: #1e1e1e;
+	font: inherit;
+	cursor: pointer;
+
+	&[aria-pressed="true"] {
+		border-color: var(--mermaid-accent);
+		box-shadow: inset 0 0 0 1px var(--mermaid-accent);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--mermaid-accent);
+		outline-offset: 2px;
+	}
+}
+
+.windrose-livery-mermaid__fieldset {
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.windrose-livery-mermaid__legend {
+	margin-bottom: 8px;
+	padding: 0;
+	font-weight: 600;
+}
+
+.windrose-livery-mermaid__fontlist {
+	max-height: 240px;
+	margin-top: 8px;
+	overflow-y: auto;
+	border: 1px solid var(--mermaid-border);
+	border-radius: 4px;
+}
+
+.windrose-livery-mermaid__font {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 10px;
+	font-size: 18px;
+	cursor: pointer;
+
+	&:has(input:checked) {
+		background: #f0f0f0;
+	}
+
+	input {
+		flex: none;
+	}
+
+	.windrose-livery-mermaid__muted {
+		font-family: inherit;
+		font-size: 12px;
+	}
+}
+
+.windrose-livery-mermaid__details {
+	margin: 16px 0;
+	padding: 8px 12px;
+	border: 1px solid var(--mermaid-border);
+	border-radius: 4px;
+
+	summary {
+		font-weight: 600;
+		cursor: pointer;
+	}
+
+	> * + * {
+		margin-top: 12px;
+	}
+}
+
+.windrose-livery-mermaid__weights {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px 24px;
+	margin: 0;
+	padding: 8px 0;
+	border: 0;
+
+	legend {
+		margin-bottom: 4px;
+	}
+}
+
+.windrose-livery-mermaid__script {
+	display: grid;
+	gap: 8px;
+	padding: 8px 0;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.windrose-livery-mermaid__install.components-button {
+	height: auto;
+	min-height: 40px;
+	max-width: 100%;
+	white-space: normal;
+	text-align: start;
+}
+
+.windrose-livery-mermaid__script-sample {
+	margin: 0;
+	font-size: 20px;
+}
+
+// Colors.
+.windrose-livery-mermaid__filter {
+	align-items: center;
+
+	> * {
+		flex: none;
+	}
+}
+
+.windrose-livery-mermaid__palettes {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+	gap: 6px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.windrose-livery-mermaid__palette-title {
+	font-weight: 600;
+}
+
+.windrose-livery-mermaid__colors,
+.windrose-livery-mermaid__gradients {
+	display: grid;
+	gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: end;
+		gap: 8px;
+
+		.components-base-control {
+			flex: 1 1 160px;
+		}
+	}
+
+	code {
+		padding-bottom: 10px;
+		font-size: 12px;
+	}
+}
+
+.windrose-livery-mermaid__colorbutton.components-button {
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	justify-content: center;
+	border: 1px solid var(--mermaid-border);
+}
+
+.windrose-livery-mermaid__gradient {
+	display: inline-block;
+	flex: none;
+	width: 40px;
+	height: 40px;
+	border: 1px solid var(--mermaid-border);
+	border-radius: 4px;
+}
+
+.windrose-livery-mermaid__gradient-picker {
+	flex: 1 1 100%;
+}
+
+.windrose-livery-mermaid__checks {
+	display: grid;
+	gap: 4px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 4px 8px;
+		padding: 4px 0;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.is-fail .windrose-livery-mermaid__check-name {
+		color: var(--mermaid-fail);
+	}
+
+	.is-warning .windrose-livery-mermaid__check-name {
+		color: var(--mermaid-warn);
+	}
+}
+
+.windrose-livery-mermaid__check-sample {
+	display: inline-block;
+	width: 32px;
+	padding: 2px 0;
+	border: 1px solid var(--mermaid-border);
+	border-radius: 3px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.windrose-livery-mermaid__check-name {
+	flex: 1 1 180px;
+	font-weight: 600;
+}
+
+// Preview.
+.windrose-livery-mermaid__preview {
+	min-width: 0;
+	border: 1px solid var(--mermaid-border);
+	border-radius: 4px;
+	background: #f6f7f7;
+
+	@media (min-width: 960px) {
+		position: sticky;
+		top: 48px;
+	}
+}
+
+.windrose-livery-mermaid__preview-bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 10px;
+	border-bottom: 1px solid var(--mermaid-border);
+	color: #1e1e1e;
+
+	.components-spinner {
+		margin: 0;
+	}
+}
+
+.windrose-livery-mermaid__preview-title {
+	font-weight: 600;
+}
+
+.windrose-livery-mermaid__preview-widths {
+	display: flex;
+	gap: 4px;
+	margin-inline-start: auto;
+}
+
+.windrose-livery-mermaid__frame {
+	display: block;
+	width: 100%;
+	height: 70vh;
+	min-height: 420px;
+	margin: 0 auto;
+	border: 0;
+	background: #fff;
+
+	&.is-phone {
+		max-width: 390px;
+		border-inline: 1px solid var(--mermaid-border);
+	}
+}
+
+// On a public page: room around it, the site's own font for the frame.
+.windrose-livery-mermaid-block {
+	margin-block: 24px;
+}
+
+// Preview: sample page or patterns.
+.windrose-livery-mermaid__preview-modes {
+	display: flex;
+	gap: 4px;
+}
+
+// Pattern browser (0.6): Style Mermaid's preview and Livery's Browse patterns.
+.windrose-livery-patterns__controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 8px 16px;
+	padding: 8px 10px;
+	border-bottom: 1px solid var(--mermaid-border, #dcdcde);
+
+	.components-base-control {
+		min-width: 160px;
+		margin-bottom: 0;
+	}
+
+	.components-toggle-control {
+		align-self: center;
+		max-width: 280px;
+	}
+}
+
+.windrose-livery-patterns__note {
+	margin: 8px 10px;
+	color: #50575e;
+}
+
+.windrose-livery-patterns.is-side .windrose-livery-patterns__body {
+	display: grid;
+	grid-template-columns: minmax(180px, 240px) 1fr;
+	gap: 16px;
+	align-items: start;
+	padding-top: 12px;
+
+	@media (max-width: 782px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.windrose-livery-patterns__list {
+	max-height: 70vh;
+	overflow: auto;
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		margin: 0 0 6px;
+	}
+
+	.components-button.is-link {
+		text-align: start;
+		text-decoration: none;
+	}
+}
+
+// Livery's Browse patterns view: the preview's chips and frame,
+// outside Style Mermaid.
+.windrose-livery__patterns-view {
+	--mermaid-border: #ddd;
+	--mermaid-accent: var(--wp-admin-theme-color, #3858e9);
+
+	.windrose-livery-mermaid__preview-bar {
+		border: 1px solid var(--mermaid-border);
+		border-radius: 4px 4px 0 0;
+		background: #f6f7f7;
+	}
+}
+
+.windrose-livery__patterns-view .windrose-livery-mermaid__frame {
+	height: 75vh;
+	border: 1px solid #dcdcde;
+}

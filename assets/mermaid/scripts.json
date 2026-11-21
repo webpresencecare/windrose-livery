@@ -1,0 +1,318 @@
+[
+	{
+		"slug": "cyrillic-greek",
+		"lang": "ru",
+		"subsets": [
+			"cyrillic",
+			"cyrillic-ext",
+			"greek",
+			"greek-ext"
+		],
+		"dir": "ltr",
+		"sample": "Добро пожаловать · Καλώς ήρθατε",
+		"onlyMissing": true,
+		"pairs": [
+			{
+				"heading": "Noto Sans",
+				"text": "Noto Sans"
+			},
+			{
+				"heading": "Noto Serif",
+				"text": "Noto Serif"
+			},
+			{
+				"heading": "Noto Serif",
+				"text": "Noto Sans"
+			}
+		]
+	},
+	{
+		"slug": "arabic",
+		"lang": "ar",
+		"subsets": [
+			"arabic"
+		],
+		"dir": "rtl",
+		"sample": "مرحبًا بكم في موقعنا",
+		"pairs": [
+			{
+				"heading": "Beiruti",
+				"text": "Noto Sans Arabic"
+			},
+			{
+				"heading": "Cairo",
+				"text": "Cairo"
+			},
+			{
+				"heading": "Tajawal",
+				"text": "Tajawal"
+			},
+			{
+				"heading": "Amiri",
+				"text": "Noto Naskh Arabic"
+			},
+			{
+				"heading": "Noto Kufi Arabic",
+				"text": "Noto Sans Arabic"
+			}
+		],
+		"languages": [
+			{
+				"tag": "fa",
+				"fonts": [
+					"Vazirmatn"
+				],
+				"sample": "به وب‌سایت ما خوش آمدید"
+			},
+			{
+				"tag": "ur",
+				"fonts": [
+					"Noto Nastaliq Urdu"
+				],
+				"sample": "ہماری ویب سائٹ پر خوش آمدید"
+			}
+		]
+	},
+	{
+		"slug": "hebrew",
+		"lang": "he",
+		"subsets": [
+			"hebrew"
+		],
+		"dir": "rtl",
+		"sample": "ברוכים הבאים לאתר שלנו",
+		"pairs": [
+			{
+				"heading": "Frank Ruhl Libre",
+				"text": "Heebo"
+			},
+			{
+				"heading": "Rubik",
+				"text": "Rubik"
+			},
+			{
+				"heading": "Assistant",
+				"text": "Assistant"
+			},
+			{
+				"heading": "Noto Serif Hebrew",
+				"text": "Noto Sans Hebrew"
+			}
+		]
+	},
+	{
+		"slug": "devanagari",
+		"lang": "hi",
+		"subsets": [
+			"devanagari"
+		],
+		"dir": "ltr",
+		"sample": "हमारी वेबसाइट पर आपका स्वागत है",
+		"pairs": [
+			{
+				"heading": "Baloo 2",
+				"text": "Noto Sans Devanagari"
+			},
+			{
+				"heading": "Mukta",
+				"text": "Mukta"
+			},
+			{
+				"heading": "Hind",
+				"text": "Hind"
+			},
+			{
+				"heading": "Tiro Devanagari Hindi",
+				"text": "Noto Sans Devanagari"
+			},
+			{
+				"heading": "Noto Serif Devanagari",
+				"text": "Noto Sans Devanagari"
+			}
+		]
+	},
+	{
+		"slug": "thai",
+		"lang": "th",
+		"subsets": [
+			"thai"
+		],
+		"dir": "ltr",
+		"sample": "ยินดีต้อนรับสู่เว็บไซต์ของเรา",
+		"pairs": [
+			{
+				"heading": "Prompt",
+				"text": "Sarabun"
+			},
+			{
+				"heading": "Kanit",
+				"text": "Kanit"
+			},
+			{
+				"heading": "Noto Serif Thai",
+				"text": "Noto Sans Thai"
+			}
+		]
+	},
+	{
+		"slug": "bengali",
+		"lang": "bn",
+		"subsets": [
+			"bengali"
+		],
+		"dir": "ltr",
+		"sample": "আমাদের ওয়েবসাইটে স্বাগতম",
+		"pairs": [
+			{
+				"heading": "Baloo Da 2",
+				"text": "Hind Siliguri"
+			},
+			{
+				"heading": "Noto Serif Bengali",
+				"text": "Noto Sans Bengali"
+			}
+		]
+	},
+	{
+		"slug": "tamil",
+		"lang": "ta",
+		"subsets": [
+			"tamil"
+		],
+		"dir": "ltr",
+		"sample": "எங்கள் இணையதளத்திற்கு வரவேற்கிறோம்",
+		"pairs": [
+			{
+				"heading": "Catamaran",
+				"text": "Mukta Malar"
+			},
+			{
+				"heading": "Noto Serif Tamil",
+				"text": "Noto Sans Tamil"
+			}
+		]
+	},
+	{
+		"slug": "gujarati",
+		"lang": "gu",
+		"subsets": [
+			"gujarati"
+		],
+		"dir": "ltr",
+		"sample": "અમારી વેબસાઇટ પર આપનું સ્વાગત છે",
+		"pairs": [
+			{
+				"heading": "Baloo Bhai 2",
+				"text": "Hind Vadodara"
+			},
+			{
+				"heading": "Noto Serif Gujarati",
+				"text": "Noto Sans Gujarati"
+			}
+		]
+	},
+	{
+		"slug": "gurmukhi",
+		"lang": "pa",
+		"subsets": [
+			"gurmukhi"
+		],
+		"dir": "ltr",
+		"sample": "ਸਾਡੀ ਵੈੱਬਸਾਈਟ ਤੇ ਜੀ ਆਇਆਂ ਨੂੰ",
+		"pairs": [
+			{
+				"heading": "Baloo Paaji 2",
+				"text": "Mukta Mahee"
+			},
+			{
+				"heading": "Noto Serif Gurmukhi",
+				"text": "Noto Sans Gurmukhi"
+			}
+		]
+	},
+	{
+		"slug": "georgian",
+		"lang": "ka",
+		"subsets": [
+			"georgian"
+		],
+		"dir": "ltr",
+		"sample": "კეთილი იყოს თქვენი მობრძანება",
+		"pairs": [
+			{
+				"heading": "Noto Serif Georgian",
+				"text": "Noto Sans Georgian"
+			},
+			{
+				"heading": "Noto Sans Georgian",
+				"text": "Noto Sans Georgian"
+			}
+		]
+	},
+	{
+		"slug": "armenian",
+		"lang": "hy",
+		"subsets": [
+			"armenian"
+		],
+		"dir": "ltr",
+		"sample": "Բարի գալուստ մեր կայք",
+		"pairs": [
+			{
+				"heading": "Noto Serif Armenian",
+				"text": "Noto Sans Armenian"
+			},
+			{
+				"heading": "Noto Sans Armenian",
+				"text": "Noto Sans Armenian"
+			}
+		]
+	},
+	{
+		"slug": "ethiopic",
+		"lang": "am",
+		"subsets": [
+			"ethiopic"
+		],
+		"dir": "ltr",
+		"sample": "እንኳን ወደ ድረ ገጻችን በደህና መጡ",
+		"pairs": [
+			{
+				"heading": "Noto Serif Ethiopic",
+				"text": "Noto Sans Ethiopic"
+			},
+			{
+				"heading": "Noto Sans Ethiopic",
+				"text": "Noto Sans Ethiopic"
+			}
+		]
+	},
+	{
+		"slug": "chinese-simplified",
+		"lang": "zh-Hans",
+		"system": true,
+		"dir": "ltr",
+		"sample": "欢迎访问我们的网站"
+	},
+	{
+		"slug": "chinese-traditional",
+		"lang": "zh-Hant",
+		"system": true,
+		"dir": "ltr",
+		"sample": "歡迎造訪我們的網站"
+	},
+	{
+		"slug": "japanese",
+		"lang": "ja",
+		"system": true,
+		"dir": "ltr",
+		"sample": "私たちのウェブサイトへようこそ"
+	},
+	{
+		"slug": "korean",
+		"lang": "ko",
+		"system": true,
+		"dir": "ltr",
+		"sample": "저희 웹사이트에 오신 것을 환영합니다"
+	}
+]

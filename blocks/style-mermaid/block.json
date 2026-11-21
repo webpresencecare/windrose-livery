@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "windrose/style-mermaid",
+	"title": "Style Mermaid",
+	"category": "design",
+	"description": "Lets visitors make a style variation for the Ipsum theme (fonts, colors, typography, layout, buttons) and download it as a Windrose Livery package.",
+	"keywords": [ "style", "variation", "theme", "fonts", "colors" ],
+	"textdomain": "windrose-livery",
+	"supports": {
+		"html": false,
+		"multiple": false,
+		"reusable": false,
+		"align": [ "wide", "full" ]
+	},
+	"editorScript": "windrose-livery-mermaid-block"
+}

@@ -1,0 +1,216 @@
+[
+	{
+		"name": "Ipsum as it comes",
+		"settings": {
+			"color": {
+				"palette": [
+					{
+						"slug": "base",
+						"color": "#fcfcfc"
+					},
+					{
+						"slug": "contrast",
+						"color": "#000000bf"
+					},
+					{
+						"slug": "accent-1",
+						"color": "#3355ff"
+					},
+					{
+						"slug": "accent-3",
+						"color": "#000000"
+					},
+					{
+						"slug": "accent-5",
+						"color": "#0a0a0a08"
+					},
+					{
+						"slug": "accent-6",
+						"color": "#0a0a0a33"
+					}
+				]
+			}
+		},
+		"styles": {},
+		"expected": [
+			[
+				"text",
+				10.23,
+				true
+			],
+			[
+				"text-soft",
+				9.86,
+				true
+			],
+			[
+				"link",
+				10.23,
+				true
+			],
+			[
+				"link-hover",
+				20.47,
+				true
+			],
+			[
+				"heading",
+				10.23,
+				true
+			],
+			[
+				"button",
+				10.23,
+				true
+			],
+			[
+				"button-hover",
+				20.47,
+				true
+			],
+			[
+				"accent",
+				5.27,
+				true
+			],
+			[
+				"accent-surface",
+				5.27,
+				true
+			],
+			[
+				"strong",
+				20.47,
+				true
+			]
+		]
+	},
+	{
+		"name": "Weak link hover, accent buttons, caption",
+		"settings": {
+			"color": {
+				"palette": [
+					{
+						"slug": "base",
+						"color": "#f7f9fc"
+					},
+					{
+						"slug": "contrast",
+						"color": "#13294b"
+					},
+					{
+						"slug": "accent-1",
+						"color": "#ff8c52"
+					},
+					{
+						"slug": "accent-3",
+						"color": "#091a33"
+					},
+					{
+						"slug": "accent-5",
+						"color": "#e3ebf5"
+					},
+					{
+						"slug": "accent-6",
+						"color": "#13294b33"
+					}
+				]
+			}
+		},
+		"styles": {
+			"elements": {
+				"link": {
+					"color": {
+						"text": "var:preset|color|contrast"
+					},
+					":hover": {
+						"color": {
+							"text": "var:preset|color|accent-1"
+						}
+					}
+				},
+				"heading": {
+					"color": {
+						"text": "var(--wp--preset--color--accent-3)"
+					}
+				},
+				"caption": {
+					"color": {
+						"text": "#999999"
+					}
+				}
+			},
+			"blocks": {
+				"core/button": {
+					"color": {
+						"background": "var:preset|color|accent-1",
+						"text": "var:preset|color|base"
+					},
+					":hover": {
+						"color": {
+							"background": "transparent",
+							"text": "var:preset|color|contrast"
+						}
+					}
+				}
+			}
+		},
+		"expected": [
+			[
+				"text",
+				13.77,
+				true
+			],
+			[
+				"text-soft",
+				12.08,
+				true
+			],
+			[
+				"link",
+				13.77,
+				true
+			],
+			[
+				"link-hover",
+				2.18,
+				false
+			],
+			[
+				"heading",
+				16.49,
+				true
+			],
+			[
+				"button",
+				2.18,
+				false
+			],
+			[
+				"button-hover",
+				13.77,
+				true
+			],
+			[
+				"caption",
+				2.7,
+				false
+			],
+			[
+				"accent",
+				2.18,
+				false
+			],
+			[
+				"accent-surface",
+				2.18,
+				false
+			],
+			[
+				"strong",
+				16.49,
+				true
+			]
+		]
+	}
+]

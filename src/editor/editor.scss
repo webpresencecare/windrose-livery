@@ -1,0 +1,67 @@
+// Windrose Livery: the "Save styles as a variation" dialog in the Site Editor.
+@use "../admin/shared";
+
+// Light and dark: the twins and their contrast
+// (the checks list is Style Mermaid's).
+.windrose-livery__twins {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+	gap: 8px 16px;
+	margin: 0 0 16px;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+	}
+}
+
+.windrose-livery__twin-swatch {
+	flex: none;
+	width: 24px;
+	height: 24px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+
+.windrose-livery__modal .windrose-livery-mermaid__checks {
+	display: grid;
+	gap: 4px;
+	margin: 0 0 16px;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 4px 8px;
+		padding: 4px 0;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.is-fail .windrose-livery-mermaid__check-name {
+		color: #b32d2e;
+	}
+
+	.is-warning .windrose-livery-mermaid__check-name {
+		color: #8a5300;
+	}
+}
+
+.windrose-livery__modal .windrose-livery-mermaid__check-sample {
+	display: inline-block;
+	width: 32px;
+	padding: 2px 0;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	font-weight: 600;
+	text-align: center;
+}
+
+.windrose-livery__modal .windrose-livery-mermaid__check-name {
+	flex: 1 1 180px;
+	font-weight: 600;
+}

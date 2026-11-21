@@ -1,0 +1,197 @@
+// Windrose Livery screen: stored style variations.
+
+// DataViews styles, inlined from the package
+// (DataViews is bundled, not provided by WordPress).
+@use "@wordpress/dataviews/build-style/style";
+@use "shared";
+@use "../mermaid/mermaid";
+
+.windrose-livery {
+	max-width: 1600px;
+
+	.windrose-livery__notice {
+		margin: 16px 0;
+	}
+
+	.windrose-livery__card {
+		margin-bottom: 16px;
+	}
+
+	.windrose-livery__card-title {
+		margin: 0;
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+	.windrose-livery__header-buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.windrose-livery__table {
+		padding: 0;
+
+		// DataViews keeps each cell on one line (nowrap, at least 15ch):
+		// long titles, descriptions and font lists then spill over the
+		// next column or scroll the table sideways. Here they wrap.
+		.dataviews-view-table tbody .dataviews-view-table__cell-content-wrapper {
+			white-space: normal;
+			overflow-wrap: break-word;
+		}
+
+		.dataviews-view-table td,
+		.dataviews-view-table th {
+			vertical-align: top;
+		}
+
+		// The title, then the description on its own line.
+		.windrose-livery__muted {
+			display: block;
+		}
+
+		// Numbers and site names keep to the end of their cell, also
+		// when they wrap.
+		.dataviews-view-table__cell-align-end {
+			text-align: end;
+		}
+
+		// Column widths: a narrower title, room for colours and fonts.
+		// DataViews shrinks every other column to fit (width: 1%, with a
+		// selector of four classes): these outrank it.
+		.dataviews-view-table colgroup col.dataviews-view-table__col-first-data.dataviews-view-table__col-first-data {
+			width: 16%;
+		}
+
+		.dataviews-view-table colgroup col.dataviews-view-table__col-palette.dataviews-view-table__col-palette {
+			width: 14%;
+		}
+
+		.dataviews-view-table colgroup col.dataviews-view-table__col-fonts.dataviews-view-table__col-fonts {
+			width: 26%;
+		}
+
+		// Short columns (version, a few words) need no 8ch minimum, and
+		// headers may wrap too.
+		.dataviews-view-table__cell-content-wrapper:not(.dataviews-column-primary__media) {
+			min-width: 4ch;
+		}
+
+		.dataviews-view-table thead th,
+		.dataviews-view-table thead th .dataviews-view-table-header,
+		.dataviews-view-table thead th .components-button {
+			white-space: normal;
+		}
+
+		.dataviews-view-table thead th .components-button {
+			height: auto;
+			min-height: 32px;
+		}
+
+		.dataviews-view-table__primary-column-content {
+			min-width: 10ch;
+		}
+
+		.windrose-livery__swatches {
+			min-width: 96px;
+		}
+
+		.windrose-livery__site-names {
+			display: block;
+		}
+	}
+
+	.windrose-livery__mermaid-sites {
+		display: grid;
+		gap: 16px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: grid;
+			gap: 8px;
+			padding-bottom: 16px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+	}
+
+	.windrose-livery__muted {
+		color: #757575;
+	}
+
+	.windrose-livery__warn {
+		color: #8a5300;
+	}
+
+	.windrose-livery__fieldset {
+		display: grid;
+		gap: 8px;
+		margin: 8px 0 0;
+		padding: 0;
+		border: 0;
+
+		legend {
+			margin-bottom: 4px;
+			font-weight: 600;
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.windrose-livery__site-styles {
+		display: grid;
+		gap: 12px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 8px 16px;
+			padding-bottom: 12px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+	}
+
+	.windrose-livery__packs {
+
+		th,
+		td {
+			vertical-align: top;
+		}
+	}
+
+	.windrose-livery__pack-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	@media (max-width: 600px) {
+
+		.windrose-livery__packs {
+
+			thead {
+				display: none;
+			}
+
+			tr,
+			th,
+			td {
+				display: block;
+				width: auto;
+			}
+
+			.windrose-livery__pack-actions {
+				justify-content: flex-start;
+			}
+		}
+	}
+}

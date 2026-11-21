@@ -1,0 +1,338 @@
+[
+	{
+		"slug": "ipsum-blue-hour",
+		"title": "Blue Hour",
+		"source": "Ipsum",
+		"palette": [
+			{
+				"color": "#ecf7fe",
+				"name": "Base",
+				"slug": "base"
+			},
+			{
+				"color": "#0d1b26bf",
+				"name": "Contrast",
+				"slug": "contrast"
+			},
+			{
+				"color": "#006699",
+				"name": "Accent",
+				"slug": "accent-1"
+			},
+			{
+				"color": "#0d1b26",
+				"name": "Strong Contrast",
+				"slug": "accent-3"
+			},
+			{
+				"color": "#0d1b2608",
+				"name": "Surface",
+				"slug": "accent-5"
+			},
+			{
+				"color": "#0d1b2633",
+				"name": "Border",
+				"slug": "accent-6"
+			}
+		],
+		"duotone": [
+			{
+				"colors": [
+					"#0d1b26",
+					"#ecf7fe"
+				],
+				"name": "Ink on paper",
+				"slug": "duotone-1"
+			}
+		],
+		"controlScheme": "light"
+	},
+	{
+		"slug": "ipsum-sunrise",
+		"title": "Sunrise",
+		"source": "Ipsum",
+		"palette": [
+			{
+				"color": "#fef8ec",
+				"name": "Base",
+				"slug": "base"
+			},
+			{
+				"color": "#26220dbf",
+				"name": "Contrast",
+				"slug": "contrast"
+			},
+			{
+				"color": "#996600",
+				"name": "Accent",
+				"slug": "accent-1"
+			},
+			{
+				"color": "#26220d",
+				"name": "Strong Contrast",
+				"slug": "accent-3"
+			},
+			{
+				"color": "#26220d08",
+				"name": "Surface",
+				"slug": "accent-5"
+			},
+			{
+				"color": "#26220d33",
+				"name": "Border",
+				"slug": "accent-6"
+			}
+		],
+		"duotone": [
+			{
+				"colors": [
+					"#26220d",
+					"#fef8ec"
+				],
+				"name": "Pumice on paper",
+				"slug": "duotone-1"
+			}
+		],
+		"controlScheme": "light"
+	},
+	{
+		"slug": "ipsum-morning",
+		"title": "Morning",
+		"source": "Ipsum",
+		"palette": [
+			{
+				"color": "#eefbec",
+				"name": "Base",
+				"slug": "base"
+			},
+			{
+				"color": "#12260dbf",
+				"name": "Contrast",
+				"slug": "contrast"
+			},
+			{
+				"color": "#47730a",
+				"name": "Accent",
+				"slug": "accent-1"
+			},
+			{
+				"color": "#12260d",
+				"name": "Strong Contrast",
+				"slug": "accent-3"
+			},
+			{
+				"color": "#12260d08",
+				"name": "Surface",
+				"slug": "accent-5"
+			},
+			{
+				"color": "#12260d33",
+				"name": "Border",
+				"slug": "accent-6"
+			}
+		],
+		"duotone": [
+			{
+				"colors": [
+					"#12260d",
+					"#eefbec"
+				],
+				"name": "Moss on paper",
+				"slug": "duotone-1"
+			}
+		],
+		"controlScheme": "light"
+	},
+	{
+		"slug": "ipsum-high-noon",
+		"title": "High Noon",
+		"source": "Ipsum",
+		"palette": [
+			{
+				"color": "#FFFF66",
+				"name": "Base",
+				"slug": "base"
+			},
+			{
+				"color": "#000000bf",
+				"name": "Contrast",
+				"slug": "contrast"
+			},
+			{
+				"color": "#465800",
+				"name": "Accent",
+				"slug": "accent-1"
+			},
+			{
+				"color": "#000000",
+				"name": "Strong Contrast",
+				"slug": "accent-3"
+			},
+			{
+				"color": "#00000008",
+				"name": "Surface",
+				"slug": "accent-5"
+			},
+			{
+				"color": "#00000033",
+				"name": "Border",
+				"slug": "accent-6"
+			}
+		],
+		"duotone": [
+			{
+				"colors": [
+					"#000000",
+					"#FFFF66"
+				],
+				"name": "Black and acid",
+				"slug": "duotone-1"
+			}
+		],
+		"controlScheme": "light"
+	},
+	{
+		"slug": "ipsum-golden-hour",
+		"title": "Golden Hour",
+		"source": "Ipsum",
+		"palette": [
+			{
+				"color": "#7a1000",
+				"name": "Base",
+				"slug": "base"
+			},
+			{
+				"color": "#ffd9bd",
+				"name": "Contrast",
+				"slug": "contrast"
+			},
+			{
+				"color": "#ff8c52",
+				"name": "Accent",
+				"slug": "accent-1"
+			},
+			{
+				"color": "#fff1e8",
+				"name": "Strong Contrast",
+				"slug": "accent-3"
+			},
+			{
+				"color": "#ffd9bd1a",
+				"name": "Surface",
+				"slug": "accent-5"
+			},
+			{
+				"color": "#ffd9bd40",
+				"name": "Border",
+				"slug": "accent-6"
+			}
+		],
+		"duotone": [
+			{
+				"colors": [
+					"#7a1000",
+					"#ffd9bd"
+				],
+				"name": "Peach on maroon",
+				"slug": "duotone-1"
+			}
+		],
+		"controlScheme": "dark"
+	},
+	{
+		"slug": "ipsum-evening",
+		"title": "Evening",
+		"source": "Ipsum",
+		"palette": [
+			{
+				"color": "#000000",
+				"name": "Base",
+				"slug": "base"
+			},
+			{
+				"color": "#FAFAFA",
+				"name": "Contrast",
+				"slug": "contrast"
+			},
+			{
+				"color": "#FE4C57",
+				"name": "Accent",
+				"slug": "accent-1"
+			},
+			{
+				"color": "#FFFFFF",
+				"name": "Strong Contrast",
+				"slug": "accent-3"
+			},
+			{
+				"color": "#FAFAFA1A",
+				"name": "Surface",
+				"slug": "accent-5"
+			},
+			{
+				"color": "#FAFAFA40",
+				"name": "Border",
+				"slug": "accent-6"
+			}
+		],
+		"duotone": [
+			{
+				"colors": [
+					"#000000",
+					"#FFFFFF"
+				],
+				"name": "Black and white",
+				"slug": "duotone-1"
+			}
+		],
+		"controlScheme": "dark"
+	},
+	{
+		"slug": "ipsum-after-hours",
+		"title": "After Hours",
+		"source": "Ipsum",
+		"palette": [
+			{
+				"color": "#310c25",
+				"name": "Base",
+				"slug": "base"
+			},
+			{
+				"color": "#e26bbe",
+				"name": "Contrast",
+				"slug": "contrast"
+			},
+			{
+				"color": "#f2a3d8",
+				"name": "Accent",
+				"slug": "accent-1"
+			},
+			{
+				"color": "#ffcdec",
+				"name": "Strong Contrast",
+				"slug": "accent-3"
+			},
+			{
+				"color": "#e26bbe1a",
+				"name": "Surface",
+				"slug": "accent-5"
+			},
+			{
+				"color": "#e26bbe40",
+				"name": "Border",
+				"slug": "accent-6"
+			}
+		],
+		"duotone": [
+			{
+				"colors": [
+					"#310c25",
+					"#e26bbe"
+				],
+				"name": "Pink on black",
+				"slug": "duotone-1"
+			}
+		],
+		"controlScheme": "dark"
+	}
+]

@@ -1,0 +1,448 @@
+{
+	"commit": "ddf386ba1b9fbc6b2c818f1ddcd9148f54ced94b",
+	"families": {
+		"Noto Sans": {
+			"dir": "ofl/notosans",
+			"files": [
+				"NotoSans-Italic[wdth,wght].ttf",
+				"NotoSans[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif": {
+			"dir": "ofl/notoserif",
+			"files": [
+				"NotoSerif-Italic[wdth,wght].ttf",
+				"NotoSerif[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Beiruti": {
+			"dir": "ofl/beiruti",
+			"files": [
+				"Beiruti[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Arabic": {
+			"dir": "ofl/notosansarabic",
+			"files": [
+				"NotoSansArabic[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Cairo": {
+			"dir": "ofl/cairo",
+			"files": [
+				"Cairo[slnt,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Tajawal": {
+			"dir": "ofl/tajawal",
+			"files": [
+				"Tajawal-Black.ttf",
+				"Tajawal-Bold.ttf",
+				"Tajawal-ExtraBold.ttf",
+				"Tajawal-ExtraLight.ttf",
+				"Tajawal-Light.ttf",
+				"Tajawal-Medium.ttf",
+				"Tajawal-Regular.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Amiri": {
+			"dir": "ofl/amiri",
+			"files": [
+				"Amiri-Bold.ttf",
+				"Amiri-BoldItalic.ttf",
+				"Amiri-Italic.ttf",
+				"Amiri-Regular.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Naskh Arabic": {
+			"dir": "ofl/notonaskharabic",
+			"files": [
+				"NotoNaskhArabic[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Kufi Arabic": {
+			"dir": "ofl/notokufiarabic",
+			"files": [
+				"NotoKufiArabic[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Vazirmatn": {
+			"dir": "ofl/vazirmatn",
+			"files": [
+				"Vazirmatn[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Nastaliq Urdu": {
+			"dir": "ofl/notonastaliqurdu",
+			"files": [
+				"NotoNastaliqUrdu[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Frank Ruhl Libre": {
+			"dir": "ofl/frankruhllibre",
+			"files": [
+				"FrankRuhlLibre[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Heebo": {
+			"dir": "ofl/heebo",
+			"files": [
+				"Heebo[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Rubik": {
+			"dir": "ofl/rubik",
+			"files": [
+				"Rubik-Italic[wght].ttf",
+				"Rubik[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Assistant": {
+			"dir": "ofl/assistant",
+			"files": [
+				"Assistant[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Hebrew": {
+			"dir": "ofl/notoserifhebrew",
+			"files": [
+				"NotoSerifHebrew[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Hebrew": {
+			"dir": "ofl/notosanshebrew",
+			"files": [
+				"NotoSansHebrew[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Baloo 2": {
+			"dir": "ofl/baloo2",
+			"files": [
+				"Baloo2[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Devanagari": {
+			"dir": "ofl/notosansdevanagari",
+			"files": [
+				"NotoSansDevanagari[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Mukta": {
+			"dir": "ofl/mukta",
+			"files": [
+				"Mukta-Bold.ttf",
+				"Mukta-ExtraBold.ttf",
+				"Mukta-ExtraLight.ttf",
+				"Mukta-Light.ttf",
+				"Mukta-Medium.ttf",
+				"Mukta-Regular.ttf",
+				"Mukta-SemiBold.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Hind": {
+			"dir": "ofl/hind",
+			"files": [
+				"Hind-Bold.ttf",
+				"Hind-Light.ttf",
+				"Hind-Medium.ttf",
+				"Hind-Regular.ttf",
+				"Hind-SemiBold.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Tiro Devanagari Hindi": {
+			"dir": "ofl/tirodevanagarihindi",
+			"files": [
+				"TiroDevanagariHindi-Italic.ttf",
+				"TiroDevanagariHindi-Regular.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Devanagari": {
+			"dir": "ofl/notoserifdevanagari",
+			"files": [
+				"NotoSerifDevanagari[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Prompt": {
+			"dir": "ofl/prompt",
+			"files": [
+				"Prompt-Black.ttf",
+				"Prompt-BlackItalic.ttf",
+				"Prompt-Bold.ttf",
+				"Prompt-BoldItalic.ttf",
+				"Prompt-ExtraBold.ttf",
+				"Prompt-ExtraBoldItalic.ttf",
+				"Prompt-ExtraLight.ttf",
+				"Prompt-ExtraLightItalic.ttf",
+				"Prompt-Italic.ttf",
+				"Prompt-Light.ttf",
+				"Prompt-LightItalic.ttf",
+				"Prompt-Medium.ttf",
+				"Prompt-MediumItalic.ttf",
+				"Prompt-Regular.ttf",
+				"Prompt-SemiBold.ttf",
+				"Prompt-SemiBoldItalic.ttf",
+				"Prompt-Thin.ttf",
+				"Prompt-ThinItalic.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Sarabun": {
+			"dir": "ofl/sarabun",
+			"files": [
+				"Sarabun-Bold.ttf",
+				"Sarabun-BoldItalic.ttf",
+				"Sarabun-ExtraBold.ttf",
+				"Sarabun-ExtraBoldItalic.ttf",
+				"Sarabun-ExtraLight.ttf",
+				"Sarabun-ExtraLightItalic.ttf",
+				"Sarabun-Italic.ttf",
+				"Sarabun-Light.ttf",
+				"Sarabun-LightItalic.ttf",
+				"Sarabun-Medium.ttf",
+				"Sarabun-MediumItalic.ttf",
+				"Sarabun-Regular.ttf",
+				"Sarabun-SemiBold.ttf",
+				"Sarabun-SemiBoldItalic.ttf",
+				"Sarabun-Thin.ttf",
+				"Sarabun-ThinItalic.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Kanit": {
+			"dir": "ofl/kanit",
+			"files": [
+				"Kanit-Black.ttf",
+				"Kanit-BlackItalic.ttf",
+				"Kanit-Bold.ttf",
+				"Kanit-BoldItalic.ttf",
+				"Kanit-ExtraBold.ttf",
+				"Kanit-ExtraBoldItalic.ttf",
+				"Kanit-ExtraLight.ttf",
+				"Kanit-ExtraLightItalic.ttf",
+				"Kanit-Italic.ttf",
+				"Kanit-Light.ttf",
+				"Kanit-LightItalic.ttf",
+				"Kanit-Medium.ttf",
+				"Kanit-MediumItalic.ttf",
+				"Kanit-Regular.ttf",
+				"Kanit-SemiBold.ttf",
+				"Kanit-SemiBoldItalic.ttf",
+				"Kanit-Thin.ttf",
+				"Kanit-ThinItalic.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Thai": {
+			"dir": "ofl/notoserifthai",
+			"files": [
+				"NotoSerifThai[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Thai": {
+			"dir": "ofl/notosansthai",
+			"files": [
+				"NotoSansThai[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Baloo Da 2": {
+			"dir": "ofl/balooda2",
+			"files": [
+				"BalooDa2[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Hind Siliguri": {
+			"dir": "ofl/hindsiliguri",
+			"files": [
+				"HindSiliguri-Bold.ttf",
+				"HindSiliguri-Light.ttf",
+				"HindSiliguri-Medium.ttf",
+				"HindSiliguri-Regular.ttf",
+				"HindSiliguri-SemiBold.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Bengali": {
+			"dir": "ofl/notoserifbengali",
+			"files": [
+				"NotoSerifBengali[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Bengali": {
+			"dir": "ofl/notosansbengali",
+			"files": [
+				"NotoSansBengali[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Catamaran": {
+			"dir": "ofl/catamaran",
+			"files": [
+				"Catamaran[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Mukta Malar": {
+			"dir": "ofl/muktamalar",
+			"files": [
+				"MuktaMalar-Bold.ttf",
+				"MuktaMalar-ExtraBold.ttf",
+				"MuktaMalar-ExtraLight.ttf",
+				"MuktaMalar-Light.ttf",
+				"MuktaMalar-Medium.ttf",
+				"MuktaMalar-Regular.ttf",
+				"MuktaMalar-SemiBold.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Tamil": {
+			"dir": "ofl/notoseriftamil",
+			"files": [
+				"NotoSerifTamil-Italic[wdth,wght].ttf",
+				"NotoSerifTamil[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Tamil": {
+			"dir": "ofl/notosanstamil",
+			"files": [
+				"NotoSansTamil[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Baloo Bhai 2": {
+			"dir": "ofl/baloobhai2",
+			"files": [
+				"BalooBhai2[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Hind Vadodara": {
+			"dir": "ofl/hindvadodara",
+			"files": [
+				"HindVadodara-Bold.ttf",
+				"HindVadodara-Light.ttf",
+				"HindVadodara-Medium.ttf",
+				"HindVadodara-Regular.ttf",
+				"HindVadodara-SemiBold.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Gujarati": {
+			"dir": "ofl/notoserifgujarati",
+			"files": [
+				"NotoSerifGujarati[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Gujarati": {
+			"dir": "ofl/notosansgujarati",
+			"files": [
+				"NotoSansGujarati[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Baloo Paaji 2": {
+			"dir": "ofl/baloopaaji2",
+			"files": [
+				"BalooPaaji2[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Mukta Mahee": {
+			"dir": "ofl/muktamahee",
+			"files": [
+				"MuktaMahee-Bold.ttf",
+				"MuktaMahee-ExtraBold.ttf",
+				"MuktaMahee-ExtraLight.ttf",
+				"MuktaMahee-Light.ttf",
+				"MuktaMahee-Medium.ttf",
+				"MuktaMahee-Regular.ttf",
+				"MuktaMahee-SemiBold.ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Gurmukhi": {
+			"dir": "ofl/notoserifgurmukhi",
+			"files": [
+				"NotoSerifGurmukhi[wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Gurmukhi": {
+			"dir": "ofl/notosansgurmukhi",
+			"files": [
+				"NotoSansGurmukhi[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Georgian": {
+			"dir": "ofl/notoserifgeorgian",
+			"files": [
+				"NotoSerifGeorgian[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Georgian": {
+			"dir": "ofl/notosansgeorgian",
+			"files": [
+				"NotoSansGeorgian[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Armenian": {
+			"dir": "ofl/notoserifarmenian",
+			"files": [
+				"NotoSerifArmenian[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Armenian": {
+			"dir": "ofl/notosansarmenian",
+			"files": [
+				"NotoSansArmenian[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Serif Ethiopic": {
+			"dir": "ofl/notoserifethiopic",
+			"files": [
+				"NotoSerifEthiopic[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		},
+		"Noto Sans Ethiopic": {
+			"dir": "ofl/notosansethiopic",
+			"files": [
+				"NotoSansEthiopic[wdth,wght].ttf"
+			],
+			"license": "OFL.txt"
+		}
+	}
+}

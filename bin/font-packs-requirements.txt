@@ -1,0 +1,7 @@
+# Tools for bin/font-packs.py in the release workflow (Python 3.14 on ubuntu-latest), installed with --require-hashes.
+# Hashes from PyPI (https://pypi.org/project/fonttools/4.68.0/, https://pypi.org/project/Brotli/1.2.1/).
+fonttools==4.68.0 \
+    --hash=sha256:cbb63b26d33acc3eb61f544c22a0cadbe01682fc064b266bb0e33fa66cea853f \
+    --hash=sha256:d76f8fdcb6936f5e1045a0c9dd721a4bf11112e60d1e243bfa1d39f06a8b3104
+brotli==1.2.1 \
+    --hash=sha256:a998857af4fcd19920bdf5f30f0f1a23f38472a703d33e49168cd4fd32438377

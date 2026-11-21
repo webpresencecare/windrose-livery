@@ -1,0 +1,378 @@
+{
+	"version": "0.9.4",
+	"source": "https://github.com/google/fonts/tree/ddf386ba1b9fbc6b2c818f1ddcd9148f54ced94b",
+	"packs": {
+		"cyrillic-greek": {
+			"file": "windrose-livery-fonts-cyrillic-greek.zip",
+			"bytes": 586732,
+			"families": [
+				{
+					"name": "Noto Sans",
+					"slug": "noto-sans",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Serif",
+					"slug": "noto-serif",
+					"generic": "serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"arabic": {
+			"file": "windrose-livery-fonts-arabic.zip",
+			"bytes": 978245,
+			"families": [
+				{
+					"name": "Beiruti",
+					"slug": "beiruti",
+					"generic": "sans-serif",
+					"sizeAdjust": "120%"
+				},
+				{
+					"name": "Noto Sans Arabic",
+					"slug": "noto-sans-arabic",
+					"generic": "sans-serif",
+					"sizeAdjust": "115%"
+				},
+				{
+					"name": "Cairo",
+					"slug": "cairo",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Tajawal",
+					"slug": "tajawal",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Amiri",
+					"slug": "amiri",
+					"generic": "serif",
+					"sizeAdjust": "130%"
+				},
+				{
+					"name": "Noto Naskh Arabic",
+					"slug": "noto-naskh-arabic",
+					"generic": "serif",
+					"sizeAdjust": "125%"
+				},
+				{
+					"name": "Noto Kufi Arabic",
+					"slug": "noto-kufi-arabic",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Vazirmatn",
+					"slug": "vazirmatn",
+					"generic": "sans-serif",
+					"sizeAdjust": "120%"
+				},
+				{
+					"name": "Noto Nastaliq Urdu",
+					"slug": "noto-nastaliq-urdu",
+					"generic": "serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"hebrew": {
+			"file": "windrose-livery-fonts-hebrew.zip",
+			"bytes": 86328,
+			"families": [
+				{
+					"name": "Frank Ruhl Libre",
+					"slug": "frank-ruhl-libre",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Heebo",
+					"slug": "heebo",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Rubik",
+					"slug": "rubik",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Assistant",
+					"slug": "assistant",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Serif Hebrew",
+					"slug": "noto-serif-hebrew",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Hebrew",
+					"slug": "noto-sans-hebrew",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"devanagari": {
+			"file": "windrose-livery-fonts-devanagari.zip",
+			"bytes": 824122,
+			"families": [
+				{
+					"name": "Baloo 2",
+					"slug": "baloo-2",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Devanagari",
+					"slug": "noto-sans-devanagari",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Mukta",
+					"slug": "mukta",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Hind",
+					"slug": "hind",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Tiro Devanagari Hindi",
+					"slug": "tiro-devanagari-hindi",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Serif Devanagari",
+					"slug": "noto-serif-devanagari",
+					"generic": "serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"thai": {
+			"file": "windrose-livery-fonts-thai.zip",
+			"bytes": 168350,
+			"families": [
+				{
+					"name": "Prompt",
+					"slug": "prompt",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Sarabun",
+					"slug": "sarabun",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Kanit",
+					"slug": "kanit",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Serif Thai",
+					"slug": "noto-serif-thai",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Thai",
+					"slug": "noto-sans-thai",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"bengali": {
+			"file": "windrose-livery-fonts-bengali.zip",
+			"bytes": 530715,
+			"families": [
+				{
+					"name": "Baloo Da 2",
+					"slug": "baloo-da-2",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Hind Siliguri",
+					"slug": "hind-siliguri",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Serif Bengali",
+					"slug": "noto-serif-bengali",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Bengali",
+					"slug": "noto-sans-bengali",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"tamil": {
+			"file": "windrose-livery-fonts-tamil.zip",
+			"bytes": 233628,
+			"families": [
+				{
+					"name": "Catamaran",
+					"slug": "catamaran",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Mukta Malar",
+					"slug": "mukta-malar",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Serif Tamil",
+					"slug": "noto-serif-tamil",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Tamil",
+					"slug": "noto-sans-tamil",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"gujarati": {
+			"file": "windrose-livery-fonts-gujarati.zip",
+			"bytes": 445719,
+			"families": [
+				{
+					"name": "Baloo Bhai 2",
+					"slug": "baloo-bhai-2",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Hind Vadodara",
+					"slug": "hind-vadodara",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Serif Gujarati",
+					"slug": "noto-serif-gujarati",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Gujarati",
+					"slug": "noto-sans-gujarati",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"gurmukhi": {
+			"file": "windrose-livery-fonts-gurmukhi.zip",
+			"bytes": 139471,
+			"families": [
+				{
+					"name": "Baloo Paaji 2",
+					"slug": "baloo-paaji-2",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Mukta Mahee",
+					"slug": "mukta-mahee",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Serif Gurmukhi",
+					"slug": "noto-serif-gurmukhi",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Gurmukhi",
+					"slug": "noto-sans-gurmukhi",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"georgian": {
+			"file": "windrose-livery-fonts-georgian.zip",
+			"bytes": 110843,
+			"families": [
+				{
+					"name": "Noto Serif Georgian",
+					"slug": "noto-serif-georgian",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Georgian",
+					"slug": "noto-sans-georgian",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"armenian": {
+			"file": "windrose-livery-fonts-armenian.zip",
+			"bytes": 65554,
+			"families": [
+				{
+					"name": "Noto Serif Armenian",
+					"slug": "noto-serif-armenian",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Armenian",
+					"slug": "noto-sans-armenian",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				}
+			]
+		},
+		"ethiopic": {
+			"file": "windrose-livery-fonts-ethiopic.zip",
+			"bytes": 395230,
+			"families": [
+				{
+					"name": "Noto Serif Ethiopic",
+					"slug": "noto-serif-ethiopic",
+					"generic": "serif",
+					"sizeAdjust": ""
+				},
+				{
+					"name": "Noto Sans Ethiopic",
+					"slug": "noto-sans-ethiopic",
+					"generic": "sans-serif",
+					"sizeAdjust": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,41 @@
+# Publishes a GitHub release when a version tag is pushed (git tag v0.2.0, then push the tag; GitHub Desktop: History,
+# right-click the commit, Create Tag, then Push). The release carries <slug>.zip with a <slug>/ root folder, and the 12
+# font packs windrose-livery-fonts-<script>.zip; GitHub publishes their sha256 digests, which Windrose Common checks
+# before installing an update or a pack.
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Build the zip (checks that the tag matches the plugin version)
+        run: bash bin/build-zip.sh "$GITHUB_REF_NAME"
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.14'
+
+      # Font packs (Windrose Livery's fonts for other scripts): google/fonts at the commit in bin/font-sources.json,
+      # cut with the pinned fontTools; the summary must match the committed assets/mermaid/packs.json.
+      - name: Build the font packs
+        run: |
+          python -m pip install --require-hashes --only-binary=:all: -r bin/font-packs-requirements.txt
+          cp assets/mermaid/packs.json "$RUNNER_TEMP/packs.json"
+          python bin/font-packs.py build dist/packs
+          python bin/font-packs.py same "$RUNNER_TEMP/packs.json"
+
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SLUG: ${{ github.event.repository.name }}
+        run: gh release create "$GITHUB_REF_NAME" "dist/$SLUG.zip" dist/packs/*.zip --title "$SLUG $GITHUB_REF_NAME" --generate-notes --verify-tag
