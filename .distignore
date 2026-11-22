@@ -21,6 +21,8 @@ package.json
 package-lock.json
 webpack.config.js
 README.md
+CONTRIBUTING.md
+SECURITY.md
 CLAUDE.md
 TODO.md
 DONE.md

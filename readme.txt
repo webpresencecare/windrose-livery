@@ -1,5 +1,5 @@
 === Windrose Livery - Style Variations ===
-Contributors: patriciabt
+Contributors: patricia70
 Tags: style variations, block themes, site editor, fonts, multisite
 Requires at least: 7.2
 Tested up to: 7.2
@@ -36,6 +36,12 @@ On a network, the library is shared: network administrators manage it in Network
 
 Safety: only theme.json data is kept (no PHP, no JavaScript), checked with WordPress's own rules for unsafe CSS values; nothing that loads a file (`url()`, background images); custom CSS only for users who may edit CSS and add unfiltered HTML; font files recognized by their content (WOFF2, WOFF, TrueType, OpenType), at most 10 MB each; zips are read in memory, never unpacked to disk, and a font is only looked up inside the variation's folder.
 
+Windrose Livery is part of the Windrose Suite, a free set of plugins and themes for WordPress networks: https://www.webpresencecare.com/windrose/ . Each Windrose plugin and theme works on its own.
+
+Source code, issues and build steps: https://github.com/webpresencecare/windrose-livery
+
+Security: please report vulnerabilities privately through GitHub: https://github.com/webpresencecare/windrose-livery/security/advisories/new . Never in a public support thread.
+
 == Privacy ==
 
 Windrose Livery sets no cookies. Fonts are stored in the uploads folder of this website (the Font Library's folder, `uploads/fonts/` or `uploads/sites/<id>/fonts/`; packs and Style Mermaid's downloads in `uploads/windrose-livery/`) and served from it; a page never loads a font from another host.
@@ -63,6 +69,10 @@ It disappears from the Site Editor. Sites that use it keep their styles, and the
 = Does it work on a site with its own domain on a network? =
 
 The shared library's fonts are served from the main site's address. A site on another domain may need a CORS header for font files on the main site (not set by Livery). A site's own styles use fonts from its own address.
+
+= Is this plugin written with AI? =
+
+Yes. I write the Windrose plugins and themes with Claude Code, Anthropic's AI coding assistant: I design each feature, test it on real sites and review every release, and every commit written with Claude says so. Independent reviews are welcome on GitHub.
 
 == Uninstall ==
 

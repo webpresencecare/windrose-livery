@@ -1,5 +1,7 @@
 # Windrose Livery - Style Variations
 
+> Part of **[the Windrose Suite](https://www.webpresencecare.com/windrose/)**: WordPress for networks of sites, private by default, multilingual if you want it, free for everyone. Each Windrose plugin and theme works on its own.
+
 Style variations kept in the database, part of the Windrose Suite. They appear in the Site Editor, Styles, Browse styles, next to the theme's own, on the theme they were made for and its child themes; theme updates never remove them. Works on any block theme, on a single site or a network, without the other Windrose plugins.
 
 Requires WordPress 7.2 and PHP 8.4.
@@ -224,6 +226,22 @@ Playwright `tests/e2e/patterns.spec.mjs` (0.6) works on a throwaway site on Wind
 **Version bump** (every release): the `Version` header and `WINDROSE_LIVERY_VERSION` in `windrose-livery.php`, `Stable tag` and the changelog in `readme.txt`, `version` in `package.json` (and `package-lock.json`), and `version` in `assets/mermaid/packs.json`, which the release compares with the packs it builds (0.4.0's first tag failed on it).
 
 `common/` is Windrose Common (the update library), copied from Windrose Helm with `windrose-helm/bin/sync-common.sh`; never edit it here.
+
+## Status
+
+Updates come from this repository's GitHub releases: each download is checked against the sha256 digest GitHub publishes before it is installed. A wordpress.org version may come later, after independent reviews.
+
+## Security
+
+Please report vulnerabilities privately, never in a public issue: see [SECURITY.md](SECURITY.md).
+
+## Contributing
+
+Reviews, tests and issues are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## How this code is written
+
+I write this plugin with Claude Code (Anthropic's AI coding assistant): I design each feature, test it on real sites and review every release. Commits written with Claude say so in a `Co-Authored-By` line. Human review is especially welcome.
 
 ## License
 
