@@ -47,6 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 use WP_Error;
 use WP_Theme_JSON;
 use WP_Theme_JSON_Resolver;
+use Windrose\Common\Files;
 
 /**
  * Builds variations from Style Mermaid's choices.
@@ -500,7 +501,7 @@ final class Builder {
 		if ( str_starts_with( $token, 'b:' ) ) {
 			[ $slug, $file ] = array_pad( explode( '/', substr( $token, 2 ), 2 ), 2, '' );
 			$path            = Catalog::path( $slug, $file );
-			$bytes           = '' === $path ? null : (string) file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- A file of the plugin.
+			$bytes           = '' === $path ? null : Files::read( $path );
 			$name            = $file;
 		} elseif ( str_starts_with( $token, 'r:' ) ) {
 			$bytes = Remote_Fonts::read( substr( $token, 2 ) );
@@ -511,7 +512,7 @@ final class Builder {
 			$name                   = $file;
 		} elseif ( str_starts_with( $token, 'l:' ) ) {
 			$path  = Font_Library::face_path( (int) substr( $token, 2 ) );
-			$bytes = '' === $path ? null : (string) file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- A font in the uploads folder.
+			$bytes = '' === $path ? null : Files::read( $path );
 			$name  = (string) preg_replace( '/^[a-f0-9]{16}-/', '', wp_basename( $path ) );
 		}
 		if ( null === $bytes || '' === $bytes ) {

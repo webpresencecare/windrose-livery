@@ -21,6 +21,7 @@ declare( strict_types=1 );
 namespace Windrose\Livery;
 
 use WP_Error;
+use Windrose\Common\Files;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -557,13 +558,11 @@ final class Fonts {
 	}
 
 	/**
-	 * Direct file access (uploads are always writable by WordPress itself).
+	 * Direct file access (uploads are always writable by WordPress itself): Windrose Common's.
 	 *
 	 * @return \WP_Filesystem_Direct
 	 */
 	public static function filesystem(): \WP_Filesystem_Direct {
-		require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
-		require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
-		return new \WP_Filesystem_Direct( null );
+		return Files::direct();
 	}
 }

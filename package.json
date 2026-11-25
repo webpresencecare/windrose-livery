@@ -1,11 +1,12 @@
 {
   "name": "windrose-livery",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "private": true,
   "description": "Windrose Livery: the Style variations screen, the Site Editor menu item and Style Mermaid.",
   "license": "GPL-2.0-or-later",
   "scripts": {
     "build": "wp-scripts build admin=./src/admin/index.js editor=./src/editor/index.js mermaid=./src/mermaid/view.js mermaid-block=./src/mermaid-block/index.js light-dark-switch=./src/light-dark-switch/index.js --output-path=build --experimental-modules",
+    "postbuild": "node bin/guard-build.mjs",
     "start": "wp-scripts start admin=./src/admin/index.js editor=./src/editor/index.js mermaid=./src/mermaid/view.js mermaid-block=./src/mermaid-block/index.js light-dark-switch=./src/light-dark-switch/index.js --output-path=build --experimental-modules",
     "lint:js": "wp-scripts lint-js src",
     "test:js": "node --no-warnings --test 'tests/js/*.test.mjs'"

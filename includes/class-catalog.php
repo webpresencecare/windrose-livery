@@ -53,8 +53,7 @@ final class Catalog {
 	private static function load( string $name ): array {
 		if ( ! isset( self::$data[ $name ] ) ) {
 			$path                = WINDROSE_LIVERY_DIR . '/assets/mermaid/' . $name . '.json';
-			$json                = is_readable( $path ) ? (string) file_get_contents( $path ) : ''; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- A file of the plugin.
-			$decoded             = json_decode( $json, true );
+			$decoded             = is_readable( $path ) ? wp_json_file_decode( $path, array( 'associative' => true ) ) : null;
 			self::$data[ $name ] = is_array( $decoded ) ? $decoded : array();
 		}
 		return self::$data[ $name ];

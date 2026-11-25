@@ -54,7 +54,7 @@ final class Packs {
 	 */
 	public static function available(): array {
 		$path    = WINDROSE_LIVERY_DIR . '/assets/mermaid/packs.json';
-		$decoded = is_readable( $path ) ? json_decode( (string) file_get_contents( $path ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- A file of the plugin.
+		$decoded = is_readable( $path ) ? wp_json_file_decode( $path, array( 'associative' => true ) ) : null;
 		$packs   = is_array( $decoded ) && is_array( $decoded['packs'] ?? null ) ? $decoded['packs'] : array();
 		/**
 		 * Written by bin/font-packs.py.

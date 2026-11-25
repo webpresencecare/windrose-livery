@@ -20,6 +20,7 @@ declare( strict_types=1 );
 namespace Windrose\Livery;
 
 use WP_Error;
+use Windrose\Common\Files;
 use ZipArchive;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -90,7 +91,7 @@ final class Package {
 			if ( $size <= 0 || $size > self::MAX_JSON ) {
 				return new WP_Error( 'windrose_livery_json_size', __( 'The style variation file is empty or larger than 1 MB.', 'windrose-livery' ) );
 			}
-			$decoded = self::decode( (string) file_get_contents( $path ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- A local uploaded file.
+			$decoded = self::decode( (string) Files::read( $path ) );
 			if ( is_wp_error( $decoded ) ) {
 				return $decoded;
 			}

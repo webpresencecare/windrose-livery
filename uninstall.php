@@ -27,6 +27,11 @@ $windrose_livery_sites = is_multisite()
 		)
 	)
 	: array( get_current_blog_id() );
+// Core's direct filesystem: the files to remove are Livery's own, in the uploads folder.
+require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
+require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
+$windrose_livery_files = new WP_Filesystem_Direct( null );
+
 foreach ( $windrose_livery_sites as $windrose_livery_site ) {
 	if ( is_multisite() ) {
 		switch_to_blog( (int) $windrose_livery_site );
@@ -46,14 +51,12 @@ foreach ( $windrose_livery_sites as $windrose_livery_site ) {
 			}
 		}
 		if ( is_dir( $windrose_livery_cache ) ) {
-			rmdir( $windrose_livery_cache ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_rmdir -- An empty folder of this plugin in the uploads folder.
+			$windrose_livery_files->rmdir( $windrose_livery_cache );
 		}
 		delete_option( 'windrose_livery_packs' );
 		$windrose_livery_packs = trailingslashit( (string) $windrose_livery_uploads['basedir'] ) . 'windrose-livery/packs';
 		if ( is_dir( $windrose_livery_packs ) ) {
-			require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-base.php';
-			require_once ABSPATH . 'wp-admin/includes/class-wp-filesystem-direct.php';
-			( new WP_Filesystem_Direct( null ) )->rmdir( $windrose_livery_packs, true );
+			$windrose_livery_files->rmdir( $windrose_livery_packs, true );
 		}
 	}
 	$windrose_livery_posts = get_posts(

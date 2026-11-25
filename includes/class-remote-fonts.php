@@ -23,6 +23,7 @@ declare( strict_types=1 );
 namespace Windrose\Livery;
 
 use WP_Error;
+use Windrose\Common\Files;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -407,8 +408,7 @@ final class Remote_Fonts {
 		if ( '' === $path || ! is_file( $path ) ) {
 			return null;
 		}
-		$bytes = file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- A file in the uploads folder.
-		return is_string( $bytes ) ? $bytes : null;
+		return Files::read( $path );
 	}
 
 	/**
@@ -542,7 +542,7 @@ final class Remote_Fonts {
 		if ( is_file( $path ) ) {
 			return true;
 		}
-		return false !== file_put_contents( $path, $bytes ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_file_put_contents -- The uploads folder, written by WordPress itself.
+		return Files::write( $path, $bytes );
 	}
 
 	/**

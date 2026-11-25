@@ -34,6 +34,8 @@ class FontLibraryTest extends Livery_TestCase {
 		) as $post ) {
 			$out[ $post->post_name ] = $post;
 		}
+		// Fonts installed in the same second have no fixed order.
+		ksort( $out );
 		return $out;
 	}
 

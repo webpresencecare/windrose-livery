@@ -16,6 +16,7 @@ namespace Windrose\Livery;
 use WP_Error;
 use WP_Theme_JSON;
 use WP_Theme_JSON_Resolver;
+use Windrose\Common\Files;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -142,7 +143,7 @@ final class Importer {
 			if ( '' === $path ) {
 				return null;
 			}
-			$bytes = (string) file_get_contents( $path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents -- A local file in the uploads folder.
+			$bytes = (string) Files::read( $path );
 			$name  = wp_basename( $path );
 			if ( 1 === preg_match( '/^[a-f0-9]{16}-(.+)$/', $name, $m ) && Fonts::valid_name( $name ) ) {
 				$name = $m[1];

@@ -4,7 +4,7 @@ Tags: style variations, block themes, site editor, fonts, multisite
 Requires at least: 7.2
 Tested up to: 7.2
 Requires PHP: 8.4
-Stable tag: 0.9.4
+Stable tag: 0.9.5
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,11 @@ Yes. I write the Windrose plugins and themes with Claude Code, Anthropic's AI co
 Uninstalling removes the stored variations (shared and sites' own), each site's record of the variation it uses, each site's Style Mermaid switches and light and dark options, the network switch, the fonts Style Mermaid downloaded (`uploads/windrose-livery/cache/`) and the installed font packs (`uploads/windrose-livery/packs/`). Fonts in the Font Library stay, as ordinary installed fonts: sites that applied a variation load them from there. Twin colours stay in sites' styles as plain colours.
 
 == Changelog ==
+
+= 0.9.5 =
+* Windrose Common 1.4.0: Files, for reading, writing and copying uploads and temporary files through WordPress's Filesystem API.
+* Fonts, packages and the font cache are read and written through WordPress's Filesystem API; the plugin's own data files are read with WordPress's JSON file reader.
+* Code: the generated script files (`*.asset.php`) stop when opened directly.
 
 = 0.9.4 =
 * Windrose Common 1.3.0: updates come from the public GitHub repositories, without a token (WordPress 7.2 RC no longer has the Secrets API, where the token was kept).
