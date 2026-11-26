@@ -61,11 +61,10 @@ foreach ( $windrose_livery_sites as $windrose_livery_site ) {
 	}
 	$windrose_livery_posts = get_posts(
 		array(
-			'post_type'        => 'windrose_livery',
-			'post_status'      => 'any',
-			'numberposts'      => -1,
-			'fields'           => 'ids',
-			'suppress_filters' => true,
+			'post_type'   => 'windrose_livery',
+			'post_status' => 'any',
+			'numberposts' => -1,
+			'fields'      => 'ids',
 		)
 	);
 	foreach ( $windrose_livery_posts as $windrose_livery_post ) {

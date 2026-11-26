@@ -288,7 +288,9 @@ class PatternsTest extends Livery_TestCase {
 		$query = do_blocks( '<!-- wp:pattern {"slug":"core/query-standard-posts"} /-->' );
 		$this->assertStringContainsString( 'A walk along the harbour', $query );
 		$this->assertStringNotContainsString( 'Real post 42', $query );
-		$this->assertStringContainsString( 'data:image/svg+xml', get_the_post_thumbnail( Sample::posts()[0]->ID ) );
+		$thumbnail = get_the_post_thumbnail( Sample::posts()[0]->ID );
+		$this->assertStringContainsString( 'data:image/svg+xml', $thumbnail );
+		$this->assertStringContainsString( 'alt=""', $thumbnail, 'The sample picture is decorative.' );
 		$this->assertSame( 'Stories', get_the_terms( Sample::posts()[0]->ID, 'category' )[0]->name );
 		$this->assertStringStartsWith( 'data:image/svg+xml', (string) get_avatar_url( 0 ) );
 

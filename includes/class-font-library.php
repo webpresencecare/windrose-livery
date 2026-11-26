@@ -117,14 +117,11 @@ final class Font_Library {
 		$slug     = sanitize_title( (string) $family['slug'] );
 		$existing = get_posts(
 			array(
-				'post_type'              => 'wp_font_family',
-				'name'                   => $slug,
-				'post_status'            => 'publish',
-				'numberposts'            => 1,
-				'fields'                 => 'ids',
-				'suppress_filters'       => true,
-				'update_post_meta_cache' => false,
-				'update_post_term_cache' => false,
+				'post_type'   => 'wp_font_family',
+				'name'        => $slug,
+				'post_status' => 'publish',
+				'numberposts' => 1,
+				'fields'      => 'ids',
 			)
 		);
 		if ( array() !== $existing ) {
@@ -172,15 +169,12 @@ final class Font_Library {
 		$title                  = WP_Font_Utils::get_font_face_slug( $settings );
 		$same                   = get_posts(
 			array(
-				'post_type'              => 'wp_font_face',
-				'post_parent'            => $family_id,
-				'title'                  => $title,
-				'post_status'            => 'publish',
-				'numberposts'            => 1,
-				'fields'                 => 'ids',
-				'suppress_filters'       => true,
-				'update_post_meta_cache' => false,
-				'update_post_term_cache' => false,
+				'post_type'   => 'wp_font_face',
+				'post_parent' => $family_id,
+				'title'       => $title,
+				'post_status' => 'publish',
+				'numberposts' => 1,
+				'fields'      => 'ids',
 			)
 		);
 		if ( array() !== $same ) {
@@ -223,11 +217,10 @@ final class Font_Library {
 			static function () use ( $names ): void {
 				$faces   = get_posts(
 					array(
-						'post_type'        => 'wp_font_face',
-						'post_status'      => 'any',
-						'numberposts'      => -1,
-						'suppress_filters' => true,
-						'meta_query'       => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Only when Livery deletes files.
+						'post_type'   => 'wp_font_face',
+						'post_status' => 'any',
+						'numberposts' => -1,
+						'meta_query'  => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query -- Only when Livery deletes files.
 							array(
 								'key'     => '_wp_font_face_file',
 								'value'   => $names,
@@ -271,12 +264,11 @@ final class Font_Library {
 				$out = array();
 				foreach ( get_posts(
 					array(
-						'post_type'        => 'wp_font_family',
-						'post_status'      => 'publish',
-						'numberposts'      => 100,
-						'orderby'          => 'title',
-						'order'            => 'ASC',
-						'suppress_filters' => true,
+						'post_type'   => 'wp_font_family',
+						'post_status' => 'publish',
+						'numberposts' => 100,
+						'orderby'     => 'title',
+						'order'       => 'ASC',
 					)
 				) as $post ) {
 					if ( ! $post instanceof WP_Post || '' !== (string) get_post_meta( $post->ID, self::META, true ) ) {
@@ -468,6 +460,8 @@ final class Font_Library {
 				)
 				: array() );
 		$files = array();
+		// One query for every face's files, not one per face.
+		update_postmeta_cache( array_map( 'intval', $faces ) );
 		foreach ( $faces as $face ) {
 			foreach ( get_post_meta( (int) $face, '_wp_font_face_file', false ) as $file ) {
 				if ( is_string( $file ) && Fonts::valid_name( $file ) ) {

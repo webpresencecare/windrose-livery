@@ -290,12 +290,11 @@ final class Library {
 		return self::on_library_site(
 			static function () use ( $which, $scope ): array {
 				$args = array(
-					'post_type'        => self::POST_TYPE,
-					'post_status'      => 'private',
-					'numberposts'      => self::MAX_ITEMS,
-					'orderby'          => 'modified',
-					'order'            => 'DESC',
-					'suppress_filters' => true,
+					'post_type'   => self::POST_TYPE,
+					'post_status' => 'private',
+					'numberposts' => self::MAX_ITEMS,
+					'orderby'     => 'modified',
+					'order'       => 'DESC',
 				);
 				if ( 'any' !== $which ) {
 					// A meta query on the few posts of this type; run once per request and scope.

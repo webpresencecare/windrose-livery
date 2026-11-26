@@ -277,17 +277,13 @@ final class Rest {
 	 * @return bool
 	 */
 	public static function can_save_from_site( WP_REST_Request $request ): bool {
-		if ( ! Library::can_manage() ) {
-			return false;
-		}
 		if ( ! is_multisite() ) {
-			return true;
+			return Library::can_manage();
 		}
 		$site = (int) $request->get_param( 'site' );
-		if ( Library::scope() > 0 && Library::scope() !== $site ) {
-			return false;
-		}
-		return $site > 0 && current_user_can_for_site( $site, 'edit_theme_options' );
+		return Library::can_manage() && $site > 0
+			&& ( 0 === Library::scope() || Library::scope() === $site )
+			&& current_user_can_for_site( $site, 'edit_theme_options' );
 	}
 
 	/**

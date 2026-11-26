@@ -141,6 +141,9 @@ class SingleSiteTest extends WP_UnitTestCase {
 		wp_set_current_user( self::$editor );
 		$this->assertFalse( Library::can_manage() );
 		$this->assertSame( 403, rest_do_request( new WP_REST_Request( 'GET', '/windrose-livery/v1/variations' ) )->get_status() );
+		$from_site = new WP_REST_Request( 'POST', '/windrose-livery/v1/from-site' );
+		$from_site->set_param( 'title', 'Mine' );
+		$this->assertSame( 403, rest_do_request( $from_site )->get_status() );
 	}
 
 	public function test_the_screen_is_under_appearance(): void {

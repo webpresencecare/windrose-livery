@@ -161,6 +161,21 @@ class ScopeTest extends Livery_TestCase {
 		$this->assertSame( 403, $other->get_status(), 'Their own site’s switches only.' );
 	}
 
+	public function test_a_sites_own_library_takes_only_that_sites_styles(): void {
+		// Sites' own libraries on; the network administrator passes every other rule: only "same site as the library"
+		// refuses this.
+		update_site_option( Network::OPTION, array( 'site_admins' => true ) );
+		$params = array(
+			'scope'   => self::$ipsum_site,
+			'site'    => self::$tt5_site,
+			'title'   => 'From another site',
+			'dry_run' => true,
+		);
+		$this->assertSame( 403, $this->call( 'POST', '/from-site', $params )->get_status() );
+		$params['site'] = self::$ipsum_site;
+		$this->assertNotSame( 403, $this->call( 'POST', '/from-site', $params )->get_status() );
+	}
+
 	public function test_a_network_administrator_copies_a_sites_style_into_the_shared_library(): void {
 		update_site_option( Network::OPTION, array( 'site_admins' => true ) );
 		$this->site_admin();

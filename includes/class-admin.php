@@ -191,8 +191,9 @@ final class Admin {
 		header( 'Content-Disposition: attachment; filename="' . ( '' === $slug ? 'style-variation' : $slug ) . '.zip"' );
 		header( 'Content-Length: ' . (string) filesize( $zip ) );
 		header( 'X-Content-Type-Options: nosniff' );
+		// Deleted when PHP ends, also when the download is stopped half-way.
+		register_shutdown_function( 'wp_delete_file', $zip );
 		readfile( $zip ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_readfile -- Streams the temporary zip.
-		wp_delete_file( $zip );
 		exit;
 	}
 

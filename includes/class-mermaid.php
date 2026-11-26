@@ -712,8 +712,9 @@ final class Mermaid {
 		header( 'Content-Disposition: attachment; filename="' . $result['slug'] . '.zip"' );
 		header( 'Content-Length: ' . (string) filesize( $result['zip'] ) );
 		header( 'X-Content-Type-Options: nosniff' );
+		// Deleted when PHP ends, also when the download is stopped half-way.
+		register_shutdown_function( 'wp_delete_file', $result['zip'] );
 		readfile( $result['zip'] ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_readfile -- Streams the temporary zip.
-		wp_delete_file( $result['zip'] );
 		exit;
 	}
 

@@ -391,16 +391,16 @@ final class Sample {
 		$index = self::BASE - (int) $post_id;
 		$attrs = array(
 			'src'     => self::picture( $index ),
-			'alt'     => (string) ( $attr['alt'] ?? '' ),
 			'width'   => '1200',
 			'height'  => '800',
 			'class'   => trim( 'attachment-' . ( is_string( $size ) ? $size : 'post-thumbnail' ) . ' size-' . ( is_string( $size ) ? $size : 'post-thumbnail' ) . ' wp-post-image ' . (string) ( $attr['class'] ?? '' ) ),
 			'style'   => (string) ( $attr['style'] ?? '' ),
 			'loading' => 'lazy',
 		);
-		$out   = '<img';
+		// alt always written: empty for the decorative gradient, or the caller's text.
+		$out = '<img alt="' . esc_attr( (string) ( $attr['alt'] ?? '' ) ) . '"';
 		foreach ( $attrs as $name => $value ) {
-			if ( '' !== $value || 'alt' === $name ) {
+			if ( '' !== $value ) {
 				$out .= ' ' . $name . '="' . esc_attr( $value ) . '"';
 			}
 		}
