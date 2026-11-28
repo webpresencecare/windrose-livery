@@ -6,6 +6,7 @@
  * @package Windrose\Livery
  */
 
+use Windrose\Common\Files;
 use Windrose\Livery\Builder;
 use Windrose\Livery\Catalog;
 use Windrose\Livery\Fonts;
@@ -46,7 +47,7 @@ class PacksTest extends Livery_TestCase {
 		Packs::remove_all();
 		$dir = Packs::dir()['path'];
 		if ( is_dir( $dir ) ) {
-			Fonts::filesystem()->rmdir( $dir, true );
+			Files::direct()->rmdir( $dir, true );
 		}
 		parent::tear_down();
 	}
@@ -71,7 +72,7 @@ class PacksTest extends Livery_TestCase {
 			'cookies'  => array(),
 			'filename' => $args['filename'] ?? null,
 		);
-		$tag              = 'v' . WINDROSE_LIVERY_VERSION;
+		$tag              = 'v' . Packs::release();
 		if ( 'https://api.github.com/repos/webpresencecare/windrose-livery/releases/tags/' . $tag === $url ) {
 			if ( '' === $this->asset ) {
 				return $answer( 404, '{"message":"Not Found"}' );
@@ -168,11 +169,14 @@ class PacksTest extends Livery_TestCase {
 		return $this->zip( $entries );
 	}
 
-	/** The release rebuilds the packs and refuses a summary of another version: catch a missed bump before the tag. */
-	public function test_the_pack_summary_names_this_version(): void {
+	/** The packs live in the release that built them; a later release only points to it (never to a future one). */
+	public function test_the_pack_summary_names_the_release_that_carries_the_packs(): void {
 		$summary = json_decode( (string) file_get_contents( WINDROSE_LIVERY_DIR . '/assets/mermaid/packs.json' ), true );
 		$this->assertIsArray( $summary );
-		$this->assertSame( WINDROSE_LIVERY_VERSION, $summary['version'] ?? null, 'Bump "version" in assets/mermaid/packs.json with the plugin.' );
+		$this->assertMatchesRegularExpression( '/^\d+\.\d+\.\d+$/', (string) ( $summary['version'] ?? '' ) );
+		$this->assertSame( $summary['version'], Packs::release() );
+		// This release or an earlier one: never a release that does not exist yet.
+		$this->assertTrue( version_compare( Packs::release(), WINDROSE_LIVERY_VERSION, '<=' ) );
 	}
 
 	public function test_every_script_with_pairs_has_a_pack_of_offered_families(): void {
@@ -281,7 +285,7 @@ class PacksTest extends Livery_TestCase {
 		$this->assertSame( 'windrose_livery_pack_script', Packs::install_file( $this->pack(), 'hebrew' )->get_error_code() );
 	}
 
-	public function test_installs_from_this_versions_github_release_and_checks_the_checksum(): void {
+	public function test_installs_from_the_release_that_carries_the_packs_and_checks_the_checksum(): void {
 		$missing = Packs::install_from_github( 'arabic' );
 		$this->assertWPError( $missing );
 		$this->assertSame( 'windrose_common_asset_missing', $missing->get_error_code() );
@@ -292,7 +296,7 @@ class PacksTest extends Livery_TestCase {
 		$this->assertArrayHasKey( 'arabic', Packs::installed() );
 		$hosts = array_unique( array_map( static fn( string $u ): string => (string) wp_parse_url( $u, PHP_URL_HOST ), $this->requests ) );
 		$this->assertSame( array( 'api.github.com', 'release-assets.githubusercontent.com' ), array_values( $hosts ) );
-		$this->assertContains( 'https://api.github.com/repos/webpresencecare/windrose-livery/releases/tags/v' . WINDROSE_LIVERY_VERSION, $this->requests );
+		$this->assertContains( 'https://api.github.com/repos/webpresencecare/windrose-livery/releases/tags/v' . Packs::release(), $this->requests );
 
 		// A pack named for one script never installs another.
 		$this->assertSame( 'windrose_livery_pack_script', Packs::install_from_github( 'klingon' )->get_error_code() );

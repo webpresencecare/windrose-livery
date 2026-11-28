@@ -45,19 +45,11 @@ foreach ( $windrose_livery_sites as $windrose_livery_site ) {
 		delete_option( 'windrose_livery_font_cache' );
 		$windrose_livery_uploads = wp_upload_dir( null, false );
 		$windrose_livery_cache   = trailingslashit( (string) $windrose_livery_uploads['basedir'] ) . 'windrose-livery/cache';
-		foreach ( (array) glob( $windrose_livery_cache . '/*' ) as $windrose_livery_file ) {
-			if ( is_string( $windrose_livery_file ) && is_file( $windrose_livery_file ) ) {
-				wp_delete_file( $windrose_livery_file );
-			}
-		}
-		if ( is_dir( $windrose_livery_cache ) ) {
-			$windrose_livery_files->rmdir( $windrose_livery_cache );
-		}
+		// The font cache folder with everything in it (also files whose name starts with a dot).
+		$windrose_livery_files->rmdir( $windrose_livery_cache, true );
 		delete_option( 'windrose_livery_packs' );
 		$windrose_livery_packs = trailingslashit( (string) $windrose_livery_uploads['basedir'] ) . 'windrose-livery/packs';
-		if ( is_dir( $windrose_livery_packs ) ) {
-			$windrose_livery_files->rmdir( $windrose_livery_packs, true );
-		}
+		$windrose_livery_files->rmdir( $windrose_livery_packs, true );
 	}
 	$windrose_livery_posts = get_posts(
 		array(

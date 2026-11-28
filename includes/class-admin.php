@@ -156,6 +156,8 @@ final class Admin {
 						admin_url( 'admin-post.php' )
 					),
 					'maxUpload'  => wp_max_upload_size(),
+					// The GitHub release that carries the font packs (Font packs card).
+					'packsTag'   => 'v' . Packs::release(),
 					'editor'     => admin_url( 'site-editor.php?p=%2Fstyles' ),
 					'mermaid'    => Mermaid::config( 'admin' ),
 				)

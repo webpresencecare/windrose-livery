@@ -4,7 +4,7 @@ Tags: style variations, block themes, site editor, fonts, multisite
 Requires at least: 7.2
 Tested up to: 7.2
 Requires PHP: 8.4
-Stable tag: 0.9.6
+Stable tag: 0.9.7
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,7 +53,7 @@ Where a site turns Style Mermaid on for visitors, the choices a visitor makes ar
 == External services ==
 
 * **Google Fonts and Bunny Fonts**, only when a visitor of a public Style Mermaid clicks "Get the font" or picks fonts for another script, where the site's second switch is on (set by network administrators). Since 0.4 the people who manage styles install fonts in the Site Editor's Font Library instead (WordPress's own Install Fonts). This website then downloads the font's CSS (fonts.googleapis.com or fonts.bunny.net) and its WOFF2 files (fonts.gstatic.com or fonts.bunny.net) once, keeps them in `uploads/windrose-livery/cache/` and serves them itself. Sent: the font's name and weights, and a browser user agent; nothing about the visitor. Google Fonts terms: https://developers.google.com/fonts/terms, privacy: https://policies.google.com/privacy. Bunny Fonts: https://fonts.bunny.net/about, privacy: https://bunny.net/privacy
-* **GitHub**, only when the people who manage the library click "Install" for a font pack: this website asks the GitHub API (api.github.com) for the release of this Livery version and downloads the pack from GitHub's release file host, then checks it against the checksum GitHub publishes. Sent: the repository name, a "Windrose" User-Agent. "Upload a pack" needs no request.
+* **GitHub**, only when the people who manage the library click "Install" for a font pack: this website asks the GitHub API (api.github.com) for the Livery release that carries the font packs and downloads the pack from GitHub's release file host, then checks it against the checksum GitHub publishes. Sent: the repository name, a "Windrose" User-Agent. "Upload a pack" needs no request.
 * The bundled update library contacts the GitHub API (api.github.com) to check for and download updates of Windrose plugins: sent are the repository name and a "Windrose" User-Agent. GitHub terms: https://docs.github.com/en/site-policy/github-terms/github-terms-of-service, privacy: https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement
 
 == Frequently Asked Questions ==
@@ -79,6 +79,10 @@ Yes. I write the Windrose plugins and themes with Claude Code, Anthropic's AI co
 Uninstalling removes the stored variations (shared and sites' own), each site's record of the variation it uses, each site's Style Mermaid switches and light and dark options, the network switch, the fonts Style Mermaid downloaded (`uploads/windrose-livery/cache/`) and the installed font packs (`uploads/windrose-livery/packs/`). Fonts in the Font Library stay, as ordinary installed fonts: sites that applied a variation load them from there. Twin colours stay in sites' styles as plain colours.
 
 == Changelog ==
+
+= 0.9.7 =
+* Font packs: Livery installs them from the release that built them (named in its pack list), so a release builds the packs only when the fonts change; installing a pack works as before.
+* Fonts, packs and the font cache are all read and written through Windrose Common's Files (one way of keeping file permissions); uninstalling removes the font cache folder in one go.
 
 = 0.9.6 =
 * Downloads: the temporary zip is deleted even when a download is stopped half-way.

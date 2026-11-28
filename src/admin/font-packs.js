@@ -13,7 +13,7 @@ import {
 } from '@wordpress/components';
 import apiFetch from '@wordpress/api-fetch';
 import { __, sprintf } from '@wordpress/i18n';
-import { ROOT } from './parts';
+import { ROOT, data } from './parts';
 import { scriptNames } from '../mermaid/labels';
 
 /**
@@ -98,9 +98,13 @@ export default function FontPacks( { notify } ) {
 			</CardHeader>
 			<CardBody>
 				<p>
-					{ __(
-						'Fonts for other scripts, installed once on this website and used by Style Mermaid without Google Fonts or Bunny Fonts. Install gets the pack of this Livery version from its GitHub release; or download the pack from the release yourself and upload it. Styles keep their own copies of the fonts they use, so removing a pack changes no style.',
-						'windrose-livery'
+					{ sprintf(
+						/* translators: %s: GitHub release of Windrose Livery that carries the font packs, for example v0.9.6. */
+						__(
+							'Fonts for other scripts, installed once on this website and used by Style Mermaid without Google Fonts or Bunny Fonts. Install gets the pack from Livery’s GitHub release %s; or download the pack from that release yourself and upload it. Styles keep their own copies of the fonts they use, so removing a pack changes no style.',
+							'windrose-livery'
+						),
+						data.packsTag
 					) }
 				</p>
 				{ null === packs && <Spinner /> }

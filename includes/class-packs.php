@@ -5,7 +5,7 @@
  *
  * - Built by `bin/font-packs.py` from the google/fonts repository (SIL Open Font License) and published with each
  *   Livery release as `windrose-livery-fonts-<script>.zip` (`.github/workflows/release.yml`).
- * - Installed by a library manager: "Install" (the release of this Livery version on GitHub, through Windrose Common's
+ * - Installed by a library manager: "Install" (the Livery release that built the packs on GitHub, through Windrose Common's
  *   `Updater::release_asset()`: GitHub's published sha256 checked), or "Upload a pack" (the same zip, for sites that cannot reach GitHub).
  * - Checked like an import: read in memory by name, never extracted; `pack.json` (format 1) names only the families
  *   Style Mermaid offers for that script; faces checked with the import's rules; WOFF2 files by their first bytes,
@@ -21,6 +21,7 @@ declare( strict_types=1 );
 
 namespace Windrose\Livery;
 
+use Windrose\Common\Files;
 use Windrose\Common\Updater;
 use WP_Error;
 use ZipArchive;
@@ -62,6 +63,20 @@ final class Packs {
 		 * @var array<string, array{file: string, bytes: int, families: list<array{name: string, slug: string, generic: string, sizeAdjust: string}>}> $packs
 		 */
 		return $packs;
+	}
+
+	/**
+	 * The Livery release whose GitHub release carries the packs (`version` in `assets/mermaid/packs.json`): the
+	 * release that built them. Later releases keep pointing to it until the fonts change, so a release builds the
+	 * packs only when its fonts are new.
+	 *
+	 * @return string Version (x.y.z).
+	 */
+	public static function release(): string {
+		$path    = WINDROSE_LIVERY_DIR . '/assets/mermaid/packs.json';
+		$decoded = is_readable( $path ) ? wp_json_file_decode( $path, array( 'associative' => true ) ) : null;
+		$version = is_array( $decoded ) && is_string( $decoded['version'] ?? null ) ? $decoded['version'] : '';
+		return 1 === preg_match( '/^\d+\.\d+\.\d+$/', $version ) ? $version : WINDROSE_LIVERY_VERSION;
 	}
 
 	/**
@@ -154,12 +169,9 @@ final class Packs {
 	 * @return string|null
 	 */
 	public static function read( string $script, string $slug, string $file ): ?string {
-		$path = self::path( $script, $slug, $file );
-		if ( '' === $path || ! is_file( $path ) ) {
-			return null;
-		}
-		$bytes = Fonts::filesystem()->get_contents( $path );
-		return is_string( $bytes ) && '' !== $bytes ? $bytes : null;
+		$path  = self::path( $script, $slug, $file );
+		$bytes = '' === $path ? null : Files::read( $path );
+		return '' !== $bytes ? $bytes : null;
 	}
 
 	/**
@@ -185,7 +197,7 @@ final class Packs {
 	}
 
 	/**
-	 * Installs a script's pack from this Livery version's GitHub release (a library manager's click).
+	 * Installs a script's pack from the GitHub release that carries the packs (release(); a library manager's click).
 	 *
 	 * @param string $script Script slug.
 	 * @return Installed|WP_Error
@@ -194,7 +206,7 @@ final class Packs {
 		if ( null === self::allowed_names( $script ) ) {
 			return new WP_Error( 'windrose_livery_pack_script', __( 'There is no font pack for this script.', 'windrose-livery' ), array( 'status' => 400 ) );
 		}
-		$file = Updater::release_asset( 'windrose-livery', 'v' . WINDROSE_LIVERY_VERSION, self::PREFIX . $script . '.zip', self::MAX_ZIP );
+		$file = Updater::release_asset( 'windrose-livery', 'v' . self::release(), self::PREFIX . $script . '.zip', self::MAX_ZIP );
 		if ( is_wp_error( $file ) ) {
 			$file->add_data( array( 'status' => 502 ) );
 			return $file;
@@ -225,13 +237,13 @@ final class Packs {
 				$pack   = $read['pack'];
 				$script = $pack['script'];
 				$base   = self::dir()['path'] . '/' . $script;
-				$fs     = Fonts::filesystem();
+				$fs     = Files::direct();
 				if ( is_dir( $base ) ) {
 					$fs->rmdir( $base, true );
 				}
 				foreach ( $read['files'] as $relative => $bytes ) {
 					$target = $base . '/' . $relative;
-					if ( ! wp_mkdir_p( dirname( $target ) ) || ! $fs->put_contents( $target, $bytes, defined( 'FS_CHMOD_FILE' ) ? FS_CHMOD_FILE : 0644 ) ) {
+					if ( ! wp_mkdir_p( dirname( $target ) ) || ! Files::write( $target, $bytes ) ) {
 						$fs->rmdir( $base, true );
 						return new WP_Error( 'windrose_livery_pack_write', __( 'The pack could not be written in the uploads folder.', 'windrose-livery' ), array( 'status' => 500 ) );
 					}
@@ -259,7 +271,7 @@ final class Packs {
 			static function () use ( $script ): void {
 				$base = self::dir()['path'] . '/' . $script;
 				if ( is_dir( $base ) ) {
-					Fonts::filesystem()->rmdir( $base, true );
+					Files::direct()->rmdir( $base, true );
 				}
 				$all = get_option( self::OPTION, array() );
 				$all = is_array( $all ) ? $all : array();
@@ -267,7 +279,7 @@ final class Packs {
 				update_option( self::OPTION, $all, false );
 				$dir = self::dir()['path'];
 				if ( is_dir( $dir ) && array() === array_diff( (array) scandir( $dir ), array( '.', '..' ) ) ) {
-					Fonts::filesystem()->rmdir( $dir );
+					Files::direct()->rmdir( $dir );
 				}
 			}
 		);

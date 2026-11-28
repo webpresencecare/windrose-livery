@@ -405,10 +405,7 @@ final class Remote_Fonts {
 	 */
 	public static function read( string $stored ): ?string {
 		$path = self::path( $stored );
-		if ( '' === $path || ! is_file( $path ) ) {
-			return null;
-		}
-		return Files::read( $path );
+		return '' === $path ? null : Files::read( $path );
 	}
 
 	/**

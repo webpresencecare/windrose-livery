@@ -62,7 +62,7 @@ test.afterAll( () => {
 	try {
 		if ( /^\d+$/.test( siteId ) ) {
 			wp( 'site', 'delete', siteId, '--yes' );
-			wp( 'eval', `Windrose\\Livery\\Fonts::filesystem()->rmdir( '${ WP_PATH }/wp-content/uploads/sites/${ siteId }', true );` );
+			wp( 'eval', `Windrose\\Common\\Files::direct()->rmdir( '${ WP_PATH }/wp-content/uploads/sites/${ siteId }', true );` );
 		}
 	} catch {}
 	wp(

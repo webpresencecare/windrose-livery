@@ -238,8 +238,7 @@ final class Fonts {
 		if ( ! wp_mkdir_p( dirname( $path ) ) ) {
 			return new WP_Error( 'windrose_livery_folder', __( 'The fonts folder could not be created in the uploads folder.', 'windrose-livery' ) );
 		}
-		$fs = self::filesystem();
-		if ( ! $fs->put_contents( $path, $bytes, defined( 'FS_CHMOD_FILE' ) ? FS_CHMOD_FILE : 0644 ) ) {
+		if ( ! Files::write( $path, $bytes ) ) {
 			/* translators: %s: file name. */
 			return new WP_Error( 'windrose_livery_write', sprintf( __( '%s could not be written in the uploads folder.', 'windrose-livery' ), $stored ) );
 		}
@@ -256,8 +255,7 @@ final class Fonts {
 		if ( ! self::exists( $stored ) ) {
 			return null;
 		}
-		$bytes = self::filesystem()->get_contents( self::path( $stored ) );
-		return is_string( $bytes ) ? $bytes : null;
+		return Files::read( self::path( $stored ) );
 	}
 
 	/**
@@ -555,14 +553,5 @@ final class Fonts {
 	 */
 	private static function css_value( $value ): string {
 		return (string) preg_replace( '/[^A-Za-z0-9 %+,.?-]/', '', is_scalar( $value ) ? (string) $value : '' );
-	}
-
-	/**
-	 * Direct file access (uploads are always writable by WordPress itself): Windrose Common's.
-	 *
-	 * @return \WP_Filesystem_Direct
-	 */
-	public static function filesystem(): \WP_Filesystem_Direct {
-		return Files::direct();
 	}
 }
